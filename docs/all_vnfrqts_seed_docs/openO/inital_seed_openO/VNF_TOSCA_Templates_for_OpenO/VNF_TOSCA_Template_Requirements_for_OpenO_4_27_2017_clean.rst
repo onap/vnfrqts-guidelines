@@ -5,8 +5,8 @@
 Introduction
 ============
 
-This reference document is the ***VNF TOSCA Template Requirements for
-OpenO***, which provides recommendations and standards for building VNF
+This reference document is the *VNF TOSCA Template Requirements for
+OpenO**, which provides recommendations and standards for building VNF
 TOSCA templates compatible with OpenO– initial implementations of
 Network Cloud. It has the following features:
 
@@ -1525,9 +1525,6 @@ presentation. Slide 8. With specific rules of “valid\_target\_type”
 tosca.artifacts.nfv.SwImage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**
-**
-
 +---------------------------+------------------------------------+
 | **Shorthand Name**        | SwImage                            |
 +===========================+====================================+
@@ -1539,7 +1536,7 @@ tosca.artifacts.nfv.SwImage
 +---------------------------+------------------------------------+
 
 Properties
-^^^^^^^^^^
+~~~~~~~~~~
 
 +------------------------------------------+------------+--------------------+---------------+----------------------------------------------------------------------------------------------------+
 | Name                                     | Required   | Type               | Constraints   | Description                                                                                        |

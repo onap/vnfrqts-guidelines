@@ -843,7 +843,7 @@ number of service providers interested in acquiring VNFs.
 We invite feedback on these VNF Guidelines via
 `VNFGuidelines@list.att.com <mailto:VNFGuidelines@list.att.com?subject=VNF%20Guidelines%20and%20Requirements%20Feedback>`__.
 The ONAP Community has an active project, `VNF
-Requirements <https://wiki.onap.org/display/DW/VNF+Requirements>`__, to
+Requirements <https://wiki.onap.org/display/DW/VNF+Requirements+Project>`__, to
 deliver a unified set of VNF Guidelines and Requirements. Interested
 parties are encouraged to participate.
 

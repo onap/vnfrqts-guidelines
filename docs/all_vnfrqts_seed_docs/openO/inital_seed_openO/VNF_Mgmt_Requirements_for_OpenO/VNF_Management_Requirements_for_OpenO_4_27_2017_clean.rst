@@ -2,13 +2,7 @@
    :depth: 3
 ..
 
-\ **VNF Management Requirements for OpenO**
-
-**
-**
-
-**
-**
+**VNF Management Requirements for OpenO**
 
 Introduction
 ============
@@ -41,7 +35,7 @@ and GS NFV IFA011 V0.3.0 (2015-10) - Network Functions Virtualization
 1. .. rubric:: GVNFM Scenario
       :name: gvnfm-scenario
 
-   1. \ **VNF Develop Steps**
+   1. **VNF Develop Steps**
 
 Aid to help the VNF vendor to fasten the integration with the GVNFM, the
 OpenO provides the VNF SDK tools, and the documents. In this charter,
@@ -65,12 +59,12 @@ Note:
 
 2. The monitoring and scale policy also be provide the next release.
 
-   1. \ **VNF Rest api**
+   1. **VNF Rest api**
 
 The VNF must provide a rest api to support initial configuration over
 HTTP(s).
 
-1. \ **Set Initial Configuration**
+1. **Set Initial Configuration**
 
 +-----------------+---------------------------------------------+
 | If Definition   | Description                                 |
@@ -106,7 +100,7 @@ HTTP(s).
 |                   |             |               |                             | VNF configurable properties.                |
 +-------------------+-------------+---------------+-----------------------------+---------------------------------------------+
 
-\ **CpConfiguration:**
+**CpConfiguration:**
 
 +-------------+-------------+---------------+--------------+-----------------------------------------------------------------------------+
 | Attribute   | Qualifier   | Cardinality   | Content      | Description                                                                 |
@@ -122,8 +116,6 @@ HTTP(s).
 | cpAddress   | M           | 1..N          | CpAddress    | Address and Port assigned to the CP.                                        |
 +-------------+-------------+---------------+--------------+-----------------------------------------------------------------------------+
 
-**
-**
 
 **CpAddress:**
 
@@ -150,9 +142,6 @@ HTTP(s).
 |                     |             |               |                  |                                                                                                     |
 |                     |             |               |                  | Reserved                                                                                            |
 +---------------------+-------------+---------------+------------------+-----------------------------------------------------------------------------------------------------+
-
-**
-**
 
 **VnfConfigurableProperties:**
 
@@ -447,7 +436,7 @@ HTTP(s).
 
 }
 
-1. \ **Response Code**
+1. **Response Code**
 
 +-----------+-----------------------+-------------------------------------------------------+
 | Code      | Meaning               | Description                                           |
@@ -460,7 +449,7 @@ HTTP(s).
 1. .. rubric:: SVNFM Scenario
       :name: svnfm-scenario
 
-   1. \ **VNFM Driver Develop Steps**
+   1. **VNFM Driver Develop Steps**
 
 Aid to help the VNF vendor to fasten the integration with the NFVO via
 Special VNFM, the OpenO provides the documents. In this charter, the
@@ -476,7 +465,7 @@ SVNFM. The interface of NFVO is aligned to the ETSI IFA interfaces and
 can be gotten in the charter 5.5. The interface of SVNFM is provided by
 the VNF vendor self.
 
-1. \ **Create SVNFM Adaptor Mircoservice**
+1. **Create SVNFM Adaptor Mircoservice**
 
 Some vnfs are managed by special vnfm, before add svnfm to openo, a
 svnfm adaptor must be added to openo to adapter the interface of nfvo
@@ -518,7 +507,7 @@ POST /openoapi/microservices/v1/services
 
     A svnfm
 
-1. \ **Interfaces provided by SVNFM Driver**\ 
+1. **Interfaces provided by SVNFM Driver** 
 
 Interfaces use RESTful API and the format is as follows:
 
@@ -532,7 +521,7 @@ http(s)://[hostname][:port]/openoapi/{vnfmtype}/v1/{vnfm\_id}/[……]
 
 **juju**
 
-1. \ **Instantiate VNF**
+1. **Instantiate VNF**
 
 +-----------------+--------------------------------------------------------------------+
 | If Definition   | Description                                                        |
@@ -544,7 +533,7 @@ http(s)://[hostname][:port]/openoapi/{vnfmtype}/v1/{vnfm\_id}/[……]
 | Direction       | NSLCM->VNFMDriver                                                  |
 +-----------------+--------------------------------------------------------------------+
 
-1. \ **Request**
+1. **Request**
 
 +--------------------------+-------------+---------------+----------------------+---------------------------------------------------------------------------------------------------------------------------+
 | Parameter                | Qualifier   | Cardinality   | Content              | Description                                                                                                               |
@@ -579,9 +568,6 @@ http(s)://[hostname][:port]/openoapi/{vnfmtype}/v1/{vnfm\_id}/[……]
 +----------------+-------------+---------------+-----------+------------------------------------------------------------------------------------------------------------------+
 | cpdId          | M           | 0..1          | String    | Identifier of the external CPD in VNFD                                                                           |
 +----------------+-------------+---------------+-----------+------------------------------------------------------------------------------------------------------------------+
-
-**
-**
 
 **VimInfo:**
 
@@ -673,7 +659,7 @@ http(s)://[hostname][:port]/openoapi/{vnfmtype}/v1/{vnfm\_id}/[……]
 
     }
 
-    “interfaceEndpoint”:”http://10.43.21.105:80/”
+    “interfaceEndpoint”:”<interface endpoint url>”
 
 }
 
@@ -689,7 +675,7 @@ http(s)://[hostname][:port]/openoapi/{vnfmtype}/v1/{vnfm\_id}/[……]
 
 }
 
-1. \ **Response**
+1. **Response**
 
 +-----------------+-------------+---------------+--------------+---------------------------------------------------------+
 | Parameter       | Qualifier   | Cardinality   | Content      | Description                                             |
@@ -709,7 +695,7 @@ http(s)://[hostname][:port]/openoapi/{vnfmtype}/v1/{vnfm\_id}/[……]
 
 }
 
-1. \ **Terminate VNF**
+1. **Terminate VNF**
 
 +-----------------+----------------------------------------------------------------------------------------------+
 | IF Definition   | Description                                                                                  |
@@ -721,7 +707,7 @@ http(s)://[hostname][:port]/openoapi/{vnfmtype}/v1/{vnfm\_id}/[……]
 | Direction       | NSLCM->VNFMDriver                                                                            |
 +-----------------+----------------------------------------------------------------------------------------------+
 
-1. \ **Request**
+1. **Request**
 
 +------------------------------+-------------+---------------+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Parameter                    | Qualifier   | Cardinality   | Content        | Description                                                                                                                                                                                                                                                                                               |
@@ -751,7 +737,7 @@ http(s)://[hostname][:port]/openoapi/{vnfmtype}/v1/{vnfm\_id}/[……]
 
 }
 
-1. \ **Response**
+1. **Response**
 
 +-------------+-------------+---------------+--------------+---------------------------------------------------------+
 | Parameter   | Qualifier   | Cardinality   | Content      | Description                                             |
@@ -767,7 +753,7 @@ http(s)://[hostname][:port]/openoapi/{vnfmtype}/v1/{vnfm\_id}/[……]
 
 }
 
-1. \ **Query VNF**
+1. **Query VNF**
 
 +-----------------+------------------------------------------------------------------------------------+
 | IF Definition   | Description                                                                        |
@@ -779,11 +765,11 @@ http(s)://[hostname][:port]/openoapi/{vnfmtype}/v1/{vnfm\_id}/[……]
 | Direction       | NSLCM->VNFMDriver                                                                  |
 +-----------------+------------------------------------------------------------------------------------+
 
-1. \ **Request**
+1. **Request**
 
 VNF filter: vnfInstanceId via url [R1]
 
-1. \ **Response**
+1. **Response**
 
 +-------------+-------------+---------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------+
 | Parameter   | Qualifier   | Cardinality   | Content   | Description                                                                                                                           |
@@ -855,7 +841,7 @@ VNF filter: vnfInstanceId via url [R1]
 
 }
 
-1. \ **Get operation status**
+1. **Get operation status**
 
 +-----------------+-------------------------------------------------------------------------------------------------------+
 | IF Definition   | Description                                                                                           |
@@ -867,11 +853,11 @@ VNF filter: vnfInstanceId via url [R1]
 | Direction       | NSLCM->VNFMDriver                                                                                     |
 +-----------------+-------------------------------------------------------------------------------------------------------+
 
-1. \ **Request**
+1. **Request**
 
 None
 
-1. \ **Response**
+1. **Response**
 
 +-----------------------+-------------+---------------+---------------+--------------------------------------------------------------------------------------+
 | Parameter             | Qualifier   | Cardinality   | Content       | Description                                                                          |
@@ -963,7 +949,7 @@ None
 
 }
 
-1. \ **Scale VNF**
+1. **Scale VNF**
 
 +-----------------+------------------------------------------------------------------------------------------+
 | If Definition   | Description                                                                              |
@@ -974,9 +960,6 @@ None
 +-----------------+------------------------------------------------------------------------------------------+
 | Direction       | NSLCM->VNFMDriver                                                                        |
 +-----------------+------------------------------------------------------------------------------------------+
-
-**
-**
 
 1. **Request**
 
@@ -999,13 +982,13 @@ None
 |                                                                                                                                                                                                                                                                                           |             |               |                |                                                                                                                                                                                                               |
 |                                                                                                                                                                                                                                                                                           |             |               |                |     **Reserved**                                                                                                                                                                                              |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|     NOTE 1: ETSI GS NFV-IFA 010 `[2] <#_bookmark7>`__ specifies that the lifecycle management operations that expand or contract a VNF instance include scale in, scale out, scale up and scale down. Vertical scaling (scale up, scale down) is not supported in the present document.   |
-|                                                                                                                                                                                                                                                                                           |
-|     SCALE\_IN designates scaling in.                                                                                                                                                                                                                                                      |
-|                                                                                                                                                                                                                                                                                           |
-|     SCALE\_OUT 1 designates scaling out.                                                                                                                                                                                                                                                  |
-|                                                                                                                                                                                                                                                                                           |
-| NOTE 2: A scaling step is the smallest unit by which a VNF can be scaled w.r.t a particular scaling aspect.                                                                                                                                                                               |
+|     NOTE 1: ETSI GS NFV-IFA 010 `[2] <#_bookmark7>`__ specifies that the lifecycle management operations that expand or contract a VNF instance include scale in, scale out, scale up and scale down. Vertical scaling (scale up, scale down) is not supported in the present document.                                                                                                                                                                                                                                                                  |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|     SCALE\_IN designates scaling in.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|     SCALE\_OUT 1 designates scaling out.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| NOTE 2: A scaling step is the smallest unit by which a VNF can be scaled w.r.t a particular scaling aspect.                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 {
