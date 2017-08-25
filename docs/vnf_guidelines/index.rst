@@ -1,8 +1,7 @@
 VNF Guidelines
-------------------
+==============
 
 .. toctree::
-    :titlesonly:
+   :titlesonly: 
 
-    vnf_guidelines
-    
+   vnf_guidelines
