@@ -5,9 +5,16 @@
 
 **1. Purpose**
 ==============
+- This document focuses on setting and evolving VNF standards that will facilitate industry discussion, participation, alignment and evolution towards comprehensive and actionable VNF best practices and standard interface.
+- The goal is to accelerate adoption of VNF best practices which will increase innovation, minimize customization needed to onboard VNFs as well as reduce implementation complexity, time and cost for all impacted stakeholders. 
+- The intent is do drive harmonization of VNFs across VNF providers, Network Cloud Service providers (NCSPs) and the overall Network Function Virtualization (NFV) ecosystem by providing both long term vision as well as short tem focus and clarity.
 
 **2. Scope**
 ============
+- The audience for this document are VNF providers, NCSPs and other interested 3rd parties who need to know the design, build and lifecycle management requirements for VNFs to be compliant with ONAP.
+- These guidelines describes VNF environment and provides an overview of what the VNF developer needs to know to operate and be compliant with ONAP.
+- These guidelines are applicable to the Amsterdam release of ONAP.
+- Scope of the ONAP versions/release and future functionality
 
 **3. Introduction**
 ===================
@@ -83,9 +90,8 @@ Common approaches to packaging of VNFs enable economies of scale in
 their development. As suitable infrastructure becomes deployed, NCSPs
 have a common interest in guidelines that support the ease of deployment
 of VNFs in each other’s Network Cloud. After reading these VNF
-guidelines, NCSPs should be motivated to join AT&T in evolving these
-guidelines in the OpenECOMP open source community to meet the industry’s
-collective needs.
+guidelines, NCSPs should be motivated to join ONAP in evolving these
+guidelines to meet the industry’s collective needs.
 
 **Other interested parties**
 
@@ -106,20 +112,20 @@ c. Program and Document Structure
 ---------------------------------
 
 This document is part of a hierarchy of documents that describes the
-overall Requirements and Guidelines for OpenECOMP. The diagram below
+overall Requirements and Guidelines for ONAP. The diagram below
 identifies where this document fits in the hierarchy.
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| OpenECOMP Requirements and Guidelines                                                                                                                                                                         |
-+===============================================================================================================================================================================================================+
-| VNF Guidelines for Network Cloud and OpenECOMP | Future OpenECOMP Subject Documents                                                                                                                           |
-+------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| VNF Cloud Readiness Requirements for OpenECOMP | VNF Management Requirements for OpenECOMP | VNF Heat Template Requirements for OpenECOMP | Future,VNF Requirements Documents | Future Requirements Documents |
-+------------------------------------------------+-------------------------------------------+----------------------------------------------+-----------------------------------+-------------------------------+
++----------------------------------------------------------------------------------------------+
+| ONAP Requirements and Guidelines                                                             |
++==============================================================================================+
+| VNF Guidelines    | Future ONAP Subject Documents                                            |
++-------------------+-------------------------------------+------------------------------------+
+| VNF Requirements  | Future VNF Requirements Documents   | Future Requirements Documents      |
++-------------------+-------------------------------------+------------------------------------+
 
 Document summary:
 
-**VNF Guidelines ONAP**
+**VNF Guidelines**
 
 -  Describes VNF environment and overview of requirements
 
@@ -128,7 +134,7 @@ Document summary:
 -  VNF development readiness requirements (Design, Resiliency, Security,
    and DevOps)
 
--  Requirements for how VNFs interact and utilize OpenECOMP
+-  Requirements for how VNFs interact and utilize ONAP
 
 -  Provides recommendations and standards for building Heat templates
    compatible with ONAP.
@@ -203,9 +209,9 @@ and improved cycle time through careful design.
 reliant on human labor for critical operational tasks don’t scale. By
 aggressively automating all VNF operational procedures, VNFs have lower
 operational cost, are more rapidly deployed at scale and are more
-consistent in their operation. OpenECOMP provides the automation
+consistent in their operation. ONAP provides the automation
 framework which VNFs can take advantage of simply by implementing
-OpenECOMP compatible interfaces and lifecycle models. This enables
+ONAP compatible interfaces and lifecycle models. This enables
 automation which drives operational efficiencies and delivers the
 corresponding benefits.
 
@@ -231,7 +237,7 @@ and NCSPs.
 Today’s fast paced world requires businesses to evolve rapidly in order
 to stay relevant and competitive. To a large degree VNFs, when used with
 the same control, orchestration, management and policy framework (e.g.,
-OpenECOMP), will improve service development and composition. VNFs
+ONAP), will improve service development and composition. VNFs
 should enable NCSPs to exploit recursive nesting of VNFs to acquire VNFs
 at the smallest appropriate granularity so that new VNFs and network
 services can be composed. The ETSI NFV Framework [9]_ envisages such
@@ -245,7 +251,7 @@ creating new services composed of different combinations of lower level
 VNFs (possibly from many providers) organized in new ways. Easier and
 faster service creation often generates real value for businesses. As
 softwarization trends progress towards more agile processes, VNFs,
-OpenECOMP and Network Clouds are all expected to evolve towards
+ONAP and Network Clouds are all expected to evolve towards
 continuous integration, testing and deployment of small incremental
 changes to de-risk the upgrade process.
 
@@ -259,32 +265,32 @@ may also be assembled from VNF components (VNFCs) that each provide a
 reusable set of functionality. VNFs are expected to take advantage of
 platform provided common services.
 
-VNF management and control under OpenECOMP is different than management
-and control exposed in the ETSI MANO model. With OpenECOMP, there is
+VNF management and control under ONAP is different than management
+and control exposed in the ETSI MANO model. With ONAP, there is
 only a single management and control plane. In ETSI’s Framework [10]_,
 architectural options exist for preserving legacy systems that increase
 integration costs e.g., different VNFs can be controlled by VNF Managers
 (VNFMs) and Element Management Systems (EMSs) provided by different
-software providers. OpenECOMP addresses the concern that multiple VNFMs
+software providers. ONAP addresses the concern that multiple VNFMs
 in this space will hinder VNF reuse and increase VNF and service
 integration costs. Asking all VNF providers to take advantage of and
 interoperate with common control software mitigates related reuse and
 integration challenges. The common, SDN based, control platform
-(OpenECOMP) is being made available as an open source project to reduce
+(ONAP) is being made available as an open source project to reduce
 friction for VNF providers and enable new network functions to get to
 market faster and with lower costs.
 
-Also under OpenECOMP, VNF providers do not provide their own proprietary
-VNF Managers (VNFM) or Element Management Systems (EMS). Those
-capabilities are provided by OpenECOMP. Hence, VNFs are required to
-consume open interfaces to OpenECOMP in support of management and
-control. The VNF Package must include the appropriate data models for
-integration with OpenECOMP to enable management and control of the
-VNFCs.
 
-**Figure 1** shows a simplified OpenECOMP and Infrastructure view to
+
+
+
+
+
+
+
+**Figure 1** shows a simplified ONAP and Infrastructure view to
 highlight how individual Virtual Network Functions plug into the
-OpenECOMP control loops.
+ONAP control loops.
 
 |image0|
 
@@ -297,7 +303,7 @@ conditions are detected, uses policy to enable what, if any, action
 should be triggered. Some of the triggered actions may require a
 controller to make changes to the VNF through a VNF provided API.
 
-For a detailed comparison between ETSI NFV and OpenECOMP, refer to
+For a detailed comparison between ETSI NFV and ONAP, refer to
 Appendix C - Comparison between VNF Guidelines and ETSI GS NFV-SWA 001.
 
 
@@ -333,7 +339,7 @@ edge of the network.
 
 VNFs need to be constructed using a distributed systems architecture
 that we will call "Network Cloud Ready". They need to interact with the
-orchestration and control platform provided by OpenECOMP and address the
+orchestration and control platform provided by ONAP and address the
 new security challenges that come in this environment.
 
 The main goal of a Network Cloud Ready VNF is to run ‘well’ on any
@@ -355,9 +361,9 @@ metal reference platform).
 Network Cloud Ready VNF characteristics and design consideration can be
 grouped into three areas:
 
--  Cloud Readiness
+-  VNF Development
 
--  OpenECOMP Ready
+-  ONAP Ready
 
 -  Virtualization Environment Ready
 
@@ -380,8 +386,8 @@ Provider also needs to think about how they will integrate and deploy
 new versions of the VNF. Since the cloud environment is very dynamic,
 the developer should utilize DevOps practices to deploy new software.
 
-Requirements for Cloud Readiness can be found in the *VNF Common
-Requirements for OpenECOMP* document.
+Detailed requirements for VNF Development can be found in the *VNF Requirements* 
+document.
 
 VNF Design
 ~~~~~~~~~~
@@ -394,11 +400,11 @@ in its Annex B. When laying out the components of the VNF it is
 important to keep in mind the following principles: Single Capability,
 Independence, State and the APIs.
 
-Many Network Clouds will use Heat to describe orchestration templates
-for instantiating VNFs and VNFCs. Heat has a useful abstraction called a
-“module” that can contain one or more VNFCs. A module can be thought of
-as a deployment unit. In general the goal should be for each module to
-contain a single VNFC.
+Many Network Clouds will use Heat and TOSCA to describe orchestration 
+templates for instantiating VNFs and VNFCs. Heat and TOSCA has a useful 
+abstraction called a “module” that can contain one or more VNFCs. A 
+module can be thought of as a deployment unit. In general the goal should 
+be for each module to contain a single VNFC.
 
 Single Capability
 ^^^^^^^^^^^^^^^^^
@@ -418,7 +424,7 @@ Independence
 ^^^^^^^^^^^^
 
 VNFCs should be independently deployed, configured, upgraded, scaled,
-monitored, and administered (by OpenECOMP). The VNFC must be a
+monitored, and administered (by ONAP). The VNFC must be a
 standalone executable process.
 
 API versioning is one of the biggest enablers of independence. To be
@@ -437,7 +443,7 @@ Network Cloud is not expected to support adding/removing resources
 scaling). A VNF should be designed such that its components can scale
 independently of each other. Scaling one component should not require
 another component to be scaled at the same time. All scaling will be
-controlled by OpenECOMP.
+controlled by ONAP.
 
 Managing State
 ^^^^^^^^^^^^^^
@@ -531,10 +537,10 @@ Initially, these requirements will fall into the following categories:
 DevOps
 ~~~~~~
 
-The OpenECOMP software development and deployment methodology is
+The ONAP software development and deployment methodology is
 evolving toward a DevOps model. VNF development and deployment should
 evolve in the same direction, enabling agile delivering of end-to-end
-services. Following these same principles better positions OpenECOMP and
+services. Following these same principles better positions ONAP and
 VNF development to coevolve in the same direction.
 
 Testing
@@ -557,7 +563,7 @@ build customization. Don’t create unique (snowflake) VNFs requiring any
 manual work or human attention to deploy. Do create standardized (Lego™)
 VNFs that can be deployed in a fully automated way.
 
-OpenECOMP will orchestrate updates and upgrades of VNFs. The target
+ONAP will orchestrate updates and upgrades of VNFs. The target
 method for updates and upgrades is to onboard and validate the new
 version, then build a new instance with the new version of software,
 transfer traffic to that instance and kill the old instance. There
@@ -569,7 +575,7 @@ Automation
 
 Increased automation is enabled by VNFs and VNF design and composition.
 VNF and VNFCs should provide the following automation capabilities, as
-triggered or managed via OpenECOMP:
+triggered or managed via ONAP:
 
 -  Events and alarms
 
@@ -582,9 +588,9 @@ triggered or managed via OpenECOMP:
 b. ONAP Ready
 ---------------
 
-OpenECOMP is the “brain” providing the lifecycle management and control
+ONAP is the “brain” providing the lifecycle management and control
 of software-centric network resources, infrastructure and services.
-OpenECOMP is critical in achieving the objectives to increase the value
+ONAP is critical in achieving the objectives to increase the value
 of the Network Cloud to customers by rapidly on-boarding new services,
 enabling the creation of a new ecosystem of consumer and enterprise
 services, reducing capital and operational expenditures, and providing
@@ -595,7 +601,7 @@ and capacity.
 For more details, refer to the `ECOMP Architecture White
 Paper <http://att.com/ecomp>`__\  [12]_.
 
-One of the main OpenECOMP responsibilities is to rapidly onboard and
+One of the main ONAP responsibilities is to rapidly onboard and
 enrich VNFs to be cataloged as resources to allow composition and
 deployment of services in a multi-vendor plug and play environment. It
 is also extremely important to be able to automatically manage the VNF
@@ -603,7 +609,7 @@ run-time lifecycle to fully realize benefits of NFV. The VNF run-time
 lifecycle includes aspects such as instantiation, configuration, elastic
 scaling, automatic recovery from resource failures, and resource
 allocation. It is therefore imperative to provide VNFs that are equipped
-with well-defined capabilities that comply with OpenECOMP standards to
+with well-defined capabilities that comply with ONAP standards to
 allow rapid onboarding and automatic lifecycle management of these
 resources when deploying services as depicted in **Figure 2**.
 
@@ -611,12 +617,11 @@ resources when deploying services as depicted in **Figure 2**.
 
 \ **Figure 2. VNF Complete Lifecycle Stages**
 
-In order to realize these capabilities within the OpenECOMP platform, it
+In order to realize these capabilities within the ONAP platform, it
 is important to adhere to a set of key principles (listed below) for
-VNFs to integrate into OpenECOMP.
+VNFs to integrate into ONAP.
 
-Requirements for OpenECOMP Ready can be found in the *VNF Management
-Requirements for OpenECOMP* document.
+Requirements for ONAP Ready can be found in the *VNF Requirements* document.
 
 Design Definition
 ~~~~~~~~~~~~~~~~~
@@ -635,7 +640,7 @@ and GS NFV IFA011 V0.3.0 (2015-10) - Network Functions Virtualization
 Configuration Management
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-OpenECOMP must be able to orchestrate and manage the VNF configuration
+ONAP must be able to orchestrate and manage the VNF configuration
 to provide fully automated environment for rapid service provisioning
 and modification. VNF configuration/reconfiguration must be allowed
 directly through standardized APIs without the need for an EMS.
@@ -645,13 +650,13 @@ Monitoring and Management
 
 The end-to-end service reliability and availability in a virtualized
 environment will greatly depend on the ability to monitor and manage the
-behavior of Virtual Network Functions in real-time. OpenECOMP platform
+behavior of Virtual Network Functions in real-time. ONAP platform
 must be able to monitor the health of the network and VNFs through
 collection of event and performance data directly from network resources
 utilizing standardized APIs without the need for an EMS. The VNF
 provider must provide visibility into VNF performance and fault at the
 VNFC level (VNFC is the smallest granularity of functionality in our
-architecture) to allow OpenECOMP to proactively monitor, test, diagnose
+architecture) to allow ONAP to proactively monitor, test, diagnose
 and trouble shoot the health and behavior of VNFs at their source.
 
 Virtualization Environment Ready
@@ -707,7 +712,7 @@ to onboard VNFs, reduce implementation time and complexity as well as
 lower overall costs for all stakeholders. It is critical for the
 Industry to align on a set of standards and interfaces to quickly
 realize the benefits of NFV. AT&T is contributing these guidelines to
-the OpenECOMP open source community as a step in moving toward
+the ONAP open source community as a step in moving toward
 standards. These guidelines are based on our experience with large scale
 deployment and operations of VNFs over the past several years.
 
@@ -727,10 +732,10 @@ these guidelines are expected to remain broadly applicable across a
 number of service providers interested in acquiring VNFs.
 
 We invite feedback on these VNF Guidelines in the context of the
-OpenECOMP Project. We anticipate an ongoing project within the OpenECOMP
+ONAP Project. We anticipate an ongoing project within the ONAP
 Community to maintain similar guidance for VNF developers to enable them
 to more easily develop VNFs which are compatible with the evolving
-releases of OpenECOMP. Comments on these guidelines should be discussed
+releases of ONAP. Comments on these guidelines should be discussed
 there.
 
 Appendix A - Glossary 
@@ -738,6 +743,8 @@ Appendix A - Glossary
 
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Heat                                | Heat is a service to orchestrate composite cloud applications using a declarative template format through an OpenStack-native REST API.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
++-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| TOSCA                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Network Clouds                      | Network Clouds are built on a framework containing these essential elements: refactoring hardware elements into software functions running on commodity cloud computing infrastructure; aligning access, core, and edge networks with the traffic patterns created by IP based services; integrating the network and cloud technologies on a software platform that enables rapid, highly automated, deployment and management of services, and software defined control so that both infrastructure and functions can be optimized across change in service demand and infrastructure availability; and increasing competencies in software integration and a DevOps operations model. |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -760,11 +767,7 @@ Appendix A - Glossary
 Appendix B - References
 =======================
 
-1. VNF Cloud Readiness Requirements for OpenECOMP
-
-2. VNF Management Requirements for OpenECOMP
-
-3. VNF Heat Template Requirements for OpenECOMP
+1. VNF Requirements
 
 Appendix C - Comparison between VNF Guidelines and ETSI GS NFV-SWA 001
 ======================================================================
@@ -778,7 +781,7 @@ The SWA 001 document is a survey of the landscape for architecting a
 VNF. It includes many different options for building a VNF that take
 advantage of the ETSI MANO architecture.
 
-The Network Cloud and OpenECOMP have similarities to ETSI’s MANO, but
+The Network Cloud and ONAP have similarities to ETSI’s MANO, but
 also have differences described in earlier sections. The result is
 differences in the VNF requirements. Since these VNF Guidelines are for
 a specific implementation of an architecture they are narrower in scope
@@ -806,8 +809,8 @@ the ECOMP Architecture White Paper\  [13]_.
 Section 4.3 Interfaces
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Since OpenECOMP provides the VNFM and EMS functionality for all VNFs the
-SWA-3 and SWA-4 interfaces are OpenECOMP interfaces. All OpenECOMP
+Since ONAP provides the VNFM and EMS functionality for all VNFs the
+SWA-3 and SWA-4 interfaces are ONAP interfaces. All ONAP
 interfaces are described in this package of documents.
 
 Section 5 VNF Design Patterns and Properties
@@ -835,16 +838,16 @@ The following are differences between the VNF Guidelines and SWA-001:
 
 -  5.1.5 - The VNF Guidelines only accepts horizontal scaling (scale
    out/in) by VNFC. Vertical scaling (scale up/down) is not supported by
-   OpenECOMP.
+   ONAP.
 
--  5.1.5 - Since OpenECOMP provides all EMS and VNFM functionality
-   On-Demand scaling is accomplished through OpenECOMP and not directly
+-  5.1.5 - Since ONAP provides all EMS and VNFM functionality
+   On-Demand scaling is accomplished through ONAP and not directly
    by the VNF
 
 Section 5.2 VNF Update and Upgrade
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  5.2.2 - OpenECOMP will orchestrate updates and upgrades. The
+-  5.2.2 - ONAP will orchestrate updates and upgrades. The
    preferred method for updates and upgrades is to build a new instance
    with the new version of software, transfer traffic to that instance
    and kill the old instance
@@ -859,7 +862,7 @@ The following are differences between the VNF Guidelines and SWA-001:
    Dependent”.
 
 -  5.3.2 – The only virtualization environment currently supported by
-   OpenECOMP is “Virtual Machines”. The VNF Guidelines state that all
+   ONAP is “Virtual Machines”. The VNF Guidelines state that all
    VNFs should be hypervisor agnostic. Other virtualized environment
    options such as containers are not currently supported. However,
    container technology is targeted to be supported in the future.
@@ -867,14 +870,14 @@ The following are differences between the VNF Guidelines and SWA-001:
 -  5.3.3 - All VNFs must scale horizontally (scale out/in) within the
    Network Cloud. Vertical (scale up/down) is not supported.
 
--  5.3.5 - The VNF Guidelines state that OpenECOMP will provide full
+-  5.3.5 - The VNF Guidelines state that ONAP will provide full
    policy management for all VNFs. The VNF will not provide its own
    policy management for provisioning and management.
 
 -  5.3.7 - The VNF Guidelines recognizes both stateless and stateful
    VNFCs but it encourages the minimization of stateful VNFCs.
 
--  5.3.11 - The VNF Guidelines only allows for OpenECOMP management of
+-  5.3.11 - The VNF Guidelines only allows for ONAP management of
    the VNF. It does not allow a proprietary management interface for use
    with a 3rd party EMS
 
@@ -947,7 +950,7 @@ https://creativecommons.org/licenses/by-sa/4.0/legalcode
    standards for information and communications technologies.
 
 .. [4]
-   Full set of capabilities of Network Cloud and/or OpenECOMP might not
+   Full set of capabilities of Network Cloud and/or ONAP might not
    be needed to support traditional IT like workloads.
 
 .. [5]
