@@ -12,7 +12,7 @@
 **2. Scope**
 ============
 - The audience for this document are VNF providers, NCSPs and other interested 3rd parties who need to know the design, build and lifecycle management requirements for VNFs to be compliant with ONAP.
-- These guidelines describes VNF environment and provides an overview of what the VNF developer needs to know to operate and be compliant with ONAP.
+- These guidelines describe VNF environment and provide an overview of what the VNF developer needs to know to operate and be compliant with ONAP.
 - These guidelines are applicable to the Amsterdam release of ONAP.
 - Scope of the ONAP versions/release and future functionality
 
@@ -317,7 +317,7 @@ Some VNF use cases may require greenfield infrastructure deployments,
 others may start brownfield deployments in centralized data centers and
 then scale deployment more widely as infrastructure becomes available.
 Some service providers have been very public and proactive in setting
-transformation targets associated with VNFs [11]_.
+transformation targets associated with VNFs.
 
 Because of the complexity of migration and integration issues, the
 requirements for VNFs in the short term may need to be contextualized to
@@ -540,8 +540,7 @@ DevOps
 The ONAP software development and deployment methodology is
 evolving toward a DevOps model. VNF development and deployment should
 evolve in the same direction, enabling agile delivering of end-to-end
-services. Following these same principles better positions ONAP and
-VNF development to coevolve in the same direction.
+services.
 
 Testing
 ^^^^^^^
@@ -597,9 +596,6 @@ services, reducing capital and operational expenditures, and providing
 operations efficiencies. It delivers enhanced customer experience by
 allowing them in near real-time to reconfigure their network, services,
 and capacity.
-
-For more details, refer to the `ECOMP Architecture White
-Paper <http://att.com/ecomp>`__\  [12]_.
 
 One of the main ONAP responsibilities is to rapidly onboard and
 enrich VNFs to be cataloged as resources to allow composition and
@@ -711,10 +707,7 @@ adoption of VNFs which will increase innovation, minimize customization
 to onboard VNFs, reduce implementation time and complexity as well as
 lower overall costs for all stakeholders. It is critical for the
 Industry to align on a set of standards and interfaces to quickly
-realize the benefits of NFV. AT&T is contributing these guidelines to
-the ONAP open source community as a step in moving toward
-standards. These guidelines are based on our experience with large scale
-deployment and operations of VNFs over the past several years.
+realize the benefits of NFV.
 
 This VNF guidelines document provides a general overview and points to
 more detailed requirements documents. The subtending documents provide
@@ -732,10 +725,7 @@ these guidelines are expected to remain broadly applicable across a
 number of service providers interested in acquiring VNFs.
 
 We invite feedback on these VNF Guidelines in the context of the
-ONAP Project. We anticipate an ongoing project within the ONAP
-Community to maintain similar guidance for VNF developers to enable them
-to more easily develop VNFs which are compatible with the evolving
-releases of ONAP. Comments on these guidelines should be discussed
+ONAP Project. Comments on these guidelines should be discussed
 there.
 
 Appendix A - Glossary 
@@ -803,15 +793,7 @@ between infrastructure architectures there will naturally be some
 differences in how it interfaces with the VNF.
 
 A high level view of the differences in architecture can be found in the
-main body of this document and a more detailed analysis can be found in
-the ECOMP Architecture White Paper\  [13]_.
-
-Section 4.3 Interfaces
-~~~~~~~~~~~~~~~~~~~~~~
-
-Since ONAP provides the VNFM and EMS functionality for all VNFs the
-SWA-3 and SWA-4 interfaces are ONAP interfaces. All ONAP
-interfaces are described in this package of documents.
+main body of this document.
 
 Section 5 VNF Design Patterns and Properties
 --------------------------------------------
@@ -839,10 +821,6 @@ The following are differences between the VNF Guidelines and SWA-001:
 -  5.1.5 - The VNF Guidelines only accepts horizontal scaling (scale
    out/in) by VNFC. Vertical scaling (scale up/down) is not supported by
    ONAP.
-
--  5.1.5 - Since ONAP provides all EMS and VNFM functionality
-   On-Demand scaling is accomplished through ONAP and not directly
-   by the VNF
 
 Section 5.2 VNF Update and Upgrade
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -877,10 +855,6 @@ The following are differences between the VNF Guidelines and SWA-001:
 -  5.3.7 - The VNF Guidelines recognizes both stateless and stateful
    VNFCs but it encourages the minimization of stateful VNFCs.
 
--  5.3.11 - The VNF Guidelines only allows for ONAP management of
-   the VNF. It does not allow a proprietary management interface for use
-   with a 3rd party EMS
-
 Section 5.4 Attributes describing VNF Requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -888,52 +862,6 @@ Attributes described in the VNF Guidelines and reference documents
 include those attributes defined in this section of the SWA 001 document
 but also include additional attributes.
 
-**Copyright 2017 AT&T Intellectual Property. All Rights Reserved.**
-
-This paper is licensed to you under the Creative Commons License:
-
-**Creative Commons Attribution-ShareAlike 4.0 International Public
-License**
-
-You may obtain a copy of the License at:
-
-https://creativecommons.org/licenses/by-sa/4.0/legalcode
-
-**You are free to:**
-
--  Share — copy and redistribute the material in any medium or format
-
--  Adapt — remix, transform, and build upon the material for any
-   purpose, even commercially.
-
--  The licensor cannot revoke these freedoms as long as you follow the
-   license terms.
-
-**Under the following terms:**
-
--  Attribution — You must give appropriate credit, provide a link to the
-   license, and indicate if changes were made. You may do so in any
-   reasonable manner, but **not** in any way that suggests the
-   licensor endorses you or your use.
-
--  ShareAlike — If you remix, transform, or build upon the material, you
-   must distribute your contributions under the same license as the
-   original.
-
--  No additional restrictions — You may not apply legal terms or
-   technological measures that legally restrict others from doing
-   anything the license permits.
-
-**Notices:**
-
--  You do not have to comply with the license for elements of the
-   material in the public domain or where your use is permitted by an
-   applicable exception or limitation.
-
--  No warranties are given. The license may not give you all of the
-   permissions necessary for your intended use. For example, other
-   rights such as publicity, privacy, or moral rights may limit how you
-   use the material.
 
 .. [1]
    Softwarization is the transformation of business processes to reflect
@@ -970,23 +898,6 @@ https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
 .. [10]
    “Architectural Framework”, ETSI GS NFV 002 (v1.1.1) Oct. 2013)
-
-.. [11]
-   AT&T, for instance, has announced that it seeks to virtualize and
-   control 75% of its network functionality by 2020 and that 50% of
-   AT&T’s software be coming from open source. For AT&T, VNFs have
-   already been placed in service in the Network Cloud and enterprise
-   CPE whiteboxes.
-
-.. [12]
-   ECOMP (Enhanced Control Orchestration, Management & Policy)
-   Architecture White Paper
-   (http://about.att.com/content/dam/snrdocs/ecomp.pdf)
-
-.. [13]
-   ECOMP (Enhanced Control Orchestration, Management & Policy)
-   Architecture White Paper
-   (http://about.att.com/content/dam/snrdocs/ecomp.pdf)
 
 .. |image0| image:: VNF_Control_Loop.jpg
    :width: 6.56250in
