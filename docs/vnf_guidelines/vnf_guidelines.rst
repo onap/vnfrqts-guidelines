@@ -6,7 +6,7 @@
 **1. Purpose**
 ==============
 - This document focuses on setting and evolving VNF standards that will facilitate industry discussion, participation, alignment and evolution towards comprehensive and actionable VNF best practices and standard interface.
-- The goal is to accelerate adoption of VNF best practices which will increase innovation, minimize customization needed to onboard VNFs as well as reduce implementation complexity, time and cost for all impacted stakeholders. 
+- The goal is to accelerate adoption of VNF best practices which will increase innovation, minimize customization needed to onboard VNFs as well as reduce implementation complexity, time and cost for all impacted stakeholders.
 - The intent is do drive harmonization of VNFs across VNF providers, Network Cloud Service providers (NCSPs) and the overall Network Function Virtualization (NFV) ecosystem by providing both long term vision as well as short tem focus and clarity.
 
 **2. Scope**
@@ -386,7 +386,7 @@ Provider also needs to think about how they will integrate and deploy
 new versions of the VNF. Since the cloud environment is very dynamic,
 the developer should utilize DevOps practices to deploy new software.
 
-Detailed requirements for VNF Development can be found in the *VNF Requirements* 
+Detailed requirements for VNF Development can be found in the *VNF Requirements*
 document.
 
 VNF Design
@@ -400,10 +400,10 @@ in its Annex B. When laying out the components of the VNF it is
 important to keep in mind the following principles: Single Capability,
 Independence, State and the APIs.
 
-Many Network Clouds will use Heat and TOSCA to describe orchestration 
-templates for instantiating VNFs and VNFCs. Heat and TOSCA has a useful 
-abstraction called a “module” that can contain one or more VNFCs. A 
-module can be thought of as a deployment unit. In general the goal should 
+Many Network Clouds will use Heat and TOSCA to describe orchestration
+templates for instantiating VNFs and VNFCs. Heat and TOSCA has a useful
+abstraction called a “module” that can contain one or more VNFCs. A
+module can be thought of as a deployment unit. In general the goal should
 be for each module to contain a single VNFC.
 
 Single Capability
@@ -728,8 +728,8 @@ We invite feedback on these VNF Guidelines in the context of the
 ONAP Project. Comments on these guidelines should be discussed
 there.
 
-Appendix A - Glossary 
-======================
+Appendix A - Glossary
+=====================
 
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Heat                                | Heat is a service to orchestrate composite cloud applications using a declarative template format through an OpenStack-native REST API.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -782,7 +782,7 @@ The other sections of the SWA 001 document lie outside the scope of the
 VNF Guidelines.
 
 This appendix will describe the differences between these two documents
-indexed on the SWA 001 sections
+indexed on the SWA 001 sections.
 
 Section 4 Overview of VNF in the NFV Architecture
 -------------------------------------------------
@@ -816,7 +816,7 @@ The following are differences between the VNF Guidelines and SWA-001:
 
 -  5.1.3 - The VNF Guidelines encourages the use of stateless VNFCs.
    However, where state is needed it should be kept external to the VNFC
-   to enable easier failover
+   to enable easier failover.
 
 -  5.1.5 - The VNF Guidelines only accepts horizontal scaling (scale
    out/in) by VNFC. Vertical scaling (scale up/down) is not supported by
@@ -828,7 +828,7 @@ Section 5.2 VNF Update and Upgrade
 -  5.2.2 - ONAP will orchestrate updates and upgrades. The
    preferred method for updates and upgrades is to build a new instance
    with the new version of software, transfer traffic to that instance
-   and kill the old instance
+   and kill the old instance.
 
 Section 5.3 VNF Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
