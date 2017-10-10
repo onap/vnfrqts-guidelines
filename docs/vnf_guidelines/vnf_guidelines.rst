@@ -117,7 +117,7 @@ identifies where this document fits in the hierarchy.
 
 +----------------------------------------------------------------------------------------------+
 | ONAP Requirements and Guidelines                                                             |
-+==============================================================================================+
++===================+==========================================================================+
 | VNF Guidelines    | Future ONAP Subject Documents                                            |
 +-------------------+-------------------------------------+------------------------------------+
 | VNF Requirements  | Future VNF Requirements Documents   | Future Requirements Documents      |
@@ -141,6 +141,12 @@ Document summary:
 
 -  Provides recommendations and standards for building TOSCA templates
    compatible with ONAP.
+
+
+d. Acronyms and Definitions
+----------------------------
+Refer to Appendix A - Glossary
+
 
 **4. VNF Context**
 ==================
