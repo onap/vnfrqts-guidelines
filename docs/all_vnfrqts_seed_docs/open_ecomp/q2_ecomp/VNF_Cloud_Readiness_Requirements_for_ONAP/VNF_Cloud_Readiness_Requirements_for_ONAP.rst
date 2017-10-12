@@ -1,4 +1,4 @@
-.. contents::
+﻿.. contents::
    :depth: 3
 ..
 
@@ -915,52 +915,36 @@ the DevOps guidelines for VNFs.
 | To support scenarios such as proactive maintenance with no user impact, if a VNF provides a load balancing function across multiple instances of its VNFCs, then the VNF must respond to a "drain VNFC" [3]_ command against a specific VNFC, preventing new session from reaching the targeted VNFC, with no disruption to active sessions on the impacted VNFC.                                                            | Must     | 50110   |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+---------+
 
-**Copyright 2017 AT&T Intellectual Property. All Rights Reserved.**
 
-This paper is licensed to you under the Creative Commons License:
+**Copyright © 2017 AT&T Intellectual Property. All rights reserved.**
 
-**Creative Commons Attribution-ShareAlike 4.0 International Public
-License**
+Unless otherwise specified, all software contained herein is licensed
+under the Apache License, Version 2.0 (the “License”);
+you may not use this software except in compliance with the License.
+You may obtain a copy of the License at
 
-You may obtain a copy of the License at:
+             http://www.apache.org/licenses/LICENSE-2.0
 
-https://creativecommons.org/licenses/by-sa/4.0/legalcode
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
-**You are free to:**
+Unless otherwise specified, all documentation contained herein is licensed
+under the Creative Commons License, Attribution 4.0 Intl. (the “License”);
+you may not use this documentation except in compliance with the License.
+You may obtain a copy of the License at
 
--  Share — copy and redistribute the material in any medium or format
+             https://creativecommons.org/licenses/by/4.0/
 
--  Adapt — remix, transform, and build upon the material for any
-   purpose, even commercially.
+Unless required by applicable law or agreed to in writing, documentation
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
--  The licensor cannot revoke these freedoms as long as you follow the
-   license terms.
-
-**Under the following terms:**
-
--  Attribution — You must give appropriate credit, provide a link to the
-   license, and indicate if changes were made. You may do so in any
-   reasonable manner, but **not** in any way that suggests the
-   licensor endorses you or your use.
-
--  ShareAlike — If you remix, transform, or build upon the material, you
-   must distribute your contributions under the same license as the
-   original.
-
--  No additional restrictions — You may not apply legal terms or
-   technological measures that legally restrict others from doing
-   anything the license permits.
-
-**Notices:**
-
--  You do not have to comply with the license for elements of the
-   material in the public domain or where your use is permitted by an
-   applicable exception or limitation.
-
--  No warranties are given. The license may not give you all of the
-   permissions necessary for your intended use. For example, other
-   rights such as publicity, privacy, or moral rights may limit how you
-   use the material.
+ECOMP is a trademark and service mark of AT&T Intellectual Property.
 
 .. [1]
    Refer to NCSP’s Network Cloud specification
