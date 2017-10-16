@@ -460,7 +460,7 @@ The following rules apply to independent volume Heat templates:
     {vm-type} is described in section 4.1. If the VM was a load
     balancer, the {vm-type} could be defined as “lb”
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         vm-typevnf\_name:
@@ -483,7 +483,7 @@ The following rules apply to independent volume Heat templates:
 
 *(+ additional volume definitions)*
 
-.. code-block:: python
+.. code-block:: yaml
 
     outputs:
         {vm-type}\_volume\_id\_0:
@@ -494,7 +494,7 @@ The following rules apply to independent volume Heat templates:
 
 *Example (VNF module template):*
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         {vm-type}\_name\_0:
@@ -760,7 +760,7 @@ used to minimize the number of unique parameters defined in the Heat.
 
 *Examples:*
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         {vm-type}\_names:
@@ -775,7 +775,7 @@ used to minimize the number of unique parameters defined in the Heat.
 In this example, the {vm-type} has been defined as “lb” for load
 balancer.
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         lb\_names:
@@ -799,7 +799,7 @@ balancer.
 In this example, the {vm-type} has been defined as “lb” for load
 balancer.
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         lb\_name\_0:
@@ -840,7 +840,7 @@ The availability zone parameter must be defined as
 In this example, the {vm-type} has been defined as “lb” for load
 balancer.
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         lb\_names:
@@ -936,7 +936,7 @@ resources:
 In this example, the {vm-type} has been defined as “lb” for load
 balancer.
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         vnf\_name:
@@ -1125,7 +1125,7 @@ When the parameter is referencing an “internal” network subnet, the
 
 *Example:*
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         {network-role}\_net\_id:
@@ -1147,7 +1147,7 @@ In this example, the {network-role} has been defined as “oam” to
 represent an oam network and the {vm-type} has been defined as “lb” for
 load balancer.
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         oam\_net\_id:
@@ -1224,7 +1224,7 @@ used to minimize the number of unique parameters defined in the Heat.
 
 *Example (external network)*
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         {vm-type}\_{network-role}\_ips:
@@ -1251,7 +1251,7 @@ In this example, the {network-role} has been defined as “oam” to
 represent an oam network and the {vm-type} has been defined as “db” for
 database.
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         oam\_net\_id:
@@ -1280,7 +1280,7 @@ In this example, the {network-role} has been defined as “oam” to
 represent an oam network and the {vm-type} has been defined as “db” for
 database.
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         oam\_net\_id:
@@ -1334,7 +1334,7 @@ the parameter name must adhere to the following convention:
 
 *Example:*
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         {vm-type}\_{network-role}\_floating\_ip:
@@ -1350,7 +1350,7 @@ In this example, the {network-role} has been defined as “oam” to
 represent an oam network and the {vm-type} has been defined as “db” for
 database.
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         db\_oam\_ips:
@@ -1403,7 +1403,7 @@ In this example, the {network-role} has been defined as “oam” to
 represent an oam network and the {vm-type} has been defined as “lb” for
 load balancer.
 
-.. code-block:: python
+.. code-block:: yaml
 
     resources:
         lb\_0\_port\_0:
@@ -1439,7 +1439,7 @@ In this example, the {network-role} has been defined as “oam” to
 represent an oam network and the {vm-type} has been defined as “lb” for
 load balancer.
 
-.. code-block:: python
+.. code-block:: yaml
 
     resources:
         lb\_0\_port\_0:
@@ -1479,7 +1479,7 @@ Note that
    ‘str\_replace’ construct to generate a unique name when the vnf\_name
    does not provide uniqueness
 
-.. code-block:: python
+.. code-block:: yaml
 
     type: OS::Cinder::Volume
         properities:
@@ -1552,7 +1552,7 @@ parameters to identify the management IP address.
 
 *Example:*
 
-.. code-block:: python
+.. code-block:: yaml
 
     resources:
         admin\_server:
@@ -1637,7 +1637,7 @@ definition.
 
 For instance, the following is **not** valid Heat for a *ResourceGroup*:
 
-.. code-block:: python
+.. code-block:: yaml
 
     type: OS::Heat::ResourceGroup
         resource:
@@ -1654,7 +1654,7 @@ the nested template along with the current index as separate parameters.
 Below is an example of an **acceptable** Heat Syntax for a
 *ResourceGroup*:
 
-.. code-block:: python
+.. code-block:: yaml
 
     type: OS::Heat::ResourceGroup
     resource:
@@ -1724,7 +1724,7 @@ automatically assign a public/private key pair.
 *Example (create keypair with an existing ssh public-key for {vm-type}
 of lb (for load balancer)):*
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         vnf\_name:
@@ -1772,7 +1772,7 @@ In this example, the {network-role} has been defined as “oam” to
 represent an oam network and the {vm-type} have been defined as “lb” for
 load balancer and “db” for database.
 
-.. code-block:: python
+.. code-block:: yaml
 
     resources:
         db\_server\_group:
@@ -1975,7 +1975,7 @@ balancer and “admin” for admin server.
 
 Heat\_template\_version: 2013-05-23
 
-.. code-block:: python
+.. code-block:: yaml
 
     parameters:
         admin\_name\_0:
@@ -2002,7 +2002,7 @@ Heat\_template\_version: 2013-05-23
 
 Heat\_template\_version: 2013-05-23
 
-.. code-block:: python
+.. code-block:: yaml
 
     Parameters:
         int\_oam\_net\_id:
@@ -2128,7 +2128,7 @@ In this example, the {network-role} has been defined as “oam” to
 represent an oam network and the {vm-type} has been defined as “oam” to
 represent an oam server.
 
-.. code-block:: python
+.. code-block:: yaml
 
     oam\_server\_01:
         type: OS::Nova::Server
