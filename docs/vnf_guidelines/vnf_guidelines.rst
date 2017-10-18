@@ -905,7 +905,7 @@ but also include additional attributes.
 .. [10]
    “Architectural Framework”, ETSI GS NFV 002 (v1.1.1) Oct. 2013)
 
-.. |image0| image:: VNF_Control_Loop.jpg
+.. |image0| image:: ONAP_VNF_Control_Loop.jpg
    :width: 6.56250in
    :height: 3.69167in
 .. |image1| image:: VNF_Lifecycle.jpg
