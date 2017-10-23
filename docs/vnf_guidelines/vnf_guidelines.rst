@@ -66,10 +66,10 @@ communities imply corresponding changes in processes at many industry
 collaboration bodies. With limited operational experience and much more
 dynamic requirements, open source communities are expected to evolve
 these VNF guidelines further before final documentation of those aspects
-necessary for standardization. This white paper and accompanying
-reference documents provides VNF providers, NCSPs and other interested
-3rd parties a set of guidelines and requirements for the design, build
-and overall lifecycle management of VNFs.
+necessary for standardization. This document and accompanying refer documents 
+provides VNF providers, NCSPs and other interested 3rd parties a set of 
+guidelines and requirements for the design, build and overall lifecycle 
+management of VNFs.
 
 **VNF Providers**
 
@@ -271,18 +271,16 @@ may also be assembled from VNF components (VNFCs) that each provide a
 reusable set of functionality. VNFs are expected to take advantage of
 platform provided common services.
 
-VNF management and control under ONAP is different than management
-and control exposed in the ETSI MANO model. With ONAP, there is
-only a single management and control plane. In ETSI’s Framework [10]_,
-architectural options exist for preserving legacy systems that increase
-integration costs e.g., different VNFs can be controlled by VNF Managers
-(VNFMs) and Element Management Systems (EMSs) provided by different
-software providers. ONAP addresses the concern that multiple VNFMs
-in this space will hinder VNF reuse and increase VNF and service
-integration costs. Asking all VNF providers to take advantage of and
-interoperate with common control software mitigates related reuse and
-integration challenges. The common, SDN based, control platform
-(ONAP) is being made available as an open source project to reduce
+VNF management and control under ONAP is not complete as same as the 
+management and control exposed in the ETSI MANO model. With ONAP, there 
+are two ways to manage and control VNF. One is asking all VNF providers 
+to take advantage of and interoperate with common control software, as 
+loop indicates by the black arrows in figure 1. At the same time a  
+management and control architectural options exist for preserving legacy 
+systems, e.g., different VNFs can be controlled by VNF Managers(VNFMs) and 
+Element Management Systems (EMSs) provided by different software providers, 
+as the loop indicates by the red arrows in figure 1. 
+The ONAP is being made available as an open source project to reduce
 friction for VNF providers and enable new network functions to get to
 market faster and with lower costs.
 
@@ -568,12 +566,6 @@ build customization. Don’t create unique (snowflake) VNFs requiring any
 manual work or human attention to deploy. Do create standardized (Lego™)
 VNFs that can be deployed in a fully automated way.
 
-ONAP will orchestrate updates and upgrades of VNFs. The target
-method for updates and upgrades is to onboard and validate the new
-version, then build a new instance with the new version of software,
-transfer traffic to that instance and kill the old instance. There
-should be no need for the VNF or its components to provide an
-update/upgrade mechanism.
 
 Automation
 ^^^^^^^^^^
@@ -644,8 +636,8 @@ Configuration Management
 
 ONAP must be able to orchestrate and manage the VNF configuration
 to provide fully automated environment for rapid service provisioning
-and modification. VNF configuration/reconfiguration must be allowed
-directly through standardized APIs without the need for an EMS.
+and modification. VNF configuration/reconfiguration could be allowed
+directly through standardized APIs or through EMS and VF-C.
 
 Monitoring and Management
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -655,11 +647,11 @@ environment will greatly depend on the ability to monitor and manage the
 behavior of Virtual Network Functions in real-time. ONAP platform
 must be able to monitor the health of the network and VNFs through
 collection of event and performance data directly from network resources
-utilizing standardized APIs without the need for an EMS. The VNF
-provider must provide visibility into VNF performance and fault at the
-VNFC level (VNFC is the smallest granularity of functionality in our
-architecture) to allow ONAP to proactively monitor, test, diagnose
-and trouble shoot the health and behavior of VNFs at their source.
+utilizing standardized APIs or through EMS. The VNF provider must provide 
+visibility into VNF performance and fault at the VNFC level (VNFC is the 
+smallest granularity of functionality in our architecture) to allow ONAP 
+to proactively monitor, test, diagnose and trouble shoot the health and 
+behavior of VNFs at their source.
 
 Virtualization Environment Ready
 --------------------------------
@@ -689,11 +681,6 @@ requirements. Initially, specifics may differ per Network Cloud
 implementation and are expected to evolve over time, especially as the
 technology matures.
 
-Guest Operating Systems
-~~~~~~~~~~~~~~~~~~~~~~~
-
-VNFs should use the NCSP’s standard set of OS images to enable
-compliance with security, audit, regulatory and other needs.
 
 Compute Flavors
 ~~~~~~~~~~~~~~~
@@ -731,8 +718,9 @@ these guidelines are expected to remain broadly applicable across a
 number of service providers interested in acquiring VNFs.
 
 We invite feedback on these VNF Guidelines in the context of the
-ONAP Project. Comments on these guidelines should be discussed
-there.
+ONAP Project. We anticipate an ongoing project within the ONAP community 
+to maintain similar guidance for VNF developers to ONAP.Comments on these 
+guidelines should be discussed there.
 
 Appendix A - Glossary
 =====================
@@ -740,7 +728,7 @@ Appendix A - Glossary
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Heat                                | Heat is a service to orchestrate composite cloud applications using a declarative template format through an OpenStack-native REST API.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| TOSCA                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| TOSCA                               | Topology and Orchestration Specification for Cloud Applications (OASIS spec)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Network Clouds                      | Network Clouds are built on a framework containing these essential elements: refactoring hardware elements into software functions running on commodity cloud computing infrastructure; aligning access, core, and edge networks with the traffic patterns created by IP based services; integrating the network and cloud technologies on a software platform that enables rapid, highly automated, deployment and management of services, and software defined control so that both infrastructure and functions can be optimized across change in service demand and infrastructure availability; and increasing competencies in software integration and a DevOps operations model. |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
