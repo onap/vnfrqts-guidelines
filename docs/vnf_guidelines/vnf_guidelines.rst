@@ -271,15 +271,15 @@ may also be assembled from VNF components (VNFCs) that each provide a
 reusable set of functionality. VNFs are expected to take advantage of
 platform provided common services.
 
-VNF management and control under ONAP is not complete as same as the 
-management and control exposed in the ETSI MANO model. With ONAP, there 
-are two ways to manage and control VNF. One is asking all VNF providers 
-to take advantage of and interoperate with common control software, as 
-loop indicates by the black arrows in figure 1. At the same time a  
-management and control architectural options exist for preserving legacy 
-systems, e.g., different VNFs can be controlled by VNF Managers(VNFMs) and 
-Element Management Systems (EMSs) provided by different software providers, 
-as the loop indicates by the red arrows in figure 1. 
+VNF management and control under ONAP is different but remain compatible 
+with the management and control exposed in the ETSI MANO model. With ONAP, 
+there are two ways to manage and control VNF. One is asking all VNF providers
+to take advantage of and interoperate with common control software, as
+loop indicates by the black arrows in figure 1. At the same time a 
+management and control architectural option exists for preserving legacy
+systems, e.g., ETSI MANO compatible VNFs can be controlled by third-party or 
+specific VNF Managers(VNFMs) and Element Management Systems (EMSs) provided 
+outside ONAP,as the loop indicates by the red arrows in figure 1.
 The ONAP is being made available as an open source project to reduce
 friction for VNF providers and enable new network functions to get to
 market faster and with lower costs.
