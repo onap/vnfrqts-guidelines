@@ -722,8 +722,11 @@ ONAP Project. We anticipate an ongoing project within the ONAP community
 to maintain similar guidance for VNF developers to ONAP.Comments on these 
 guidelines should be discussed there.
 
-Appendix A - Glossary
-=====================
+**7. Appendix**
+===============
+
+a.  Glossary
+-------------
 
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Heat                                | Heat is a service to orchestrate composite cloud applications using a declarative template format through an OpenStack-native REST API.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -748,13 +751,13 @@ Appendix A - Glossary
 |                                     | |image2|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Appendix B - References
-=======================
+b.  References
+---------------
 
 1. VNF Requirements
 
-Appendix C - Comparison between VNF Guidelines and ETSI GS NFV-SWA 001
-======================================================================
+c.  Comparison between VNF Guidelines and ETSI GS NFV-SWA 001
+--------------------------------------------------------------
 
 The VNF guidelines presented in this document (VNF Guidelines) overlap
 with the ETSI GS NFV-SWA 001 (Network Functions Virtualization (NFV);
@@ -779,7 +782,7 @@ This appendix will describe the differences between these two documents
 indexed on the SWA 001 sections.
 
 Section 4 Overview of VNF in the NFV Architecture
--------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section provides an overview of the ETSI NFVI architecture and how
 it interfaces with the VNF architecture. Because of the differences
@@ -790,7 +793,7 @@ A high level view of the differences in architecture can be found in the
 main body of this document.
 
 Section 5 VNF Design Patterns and Properties
---------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section of the SWA 001 document gives a broad view of all the
 possible design patterns of VNFs. The VNF Guidelines do not generally
@@ -798,7 +801,7 @@ differ from this section. The VNF Guidelines address a more specific
 scope than what is allowed in the SWA 001 document.
 
 Section 5.1 VNF Design Patterns
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following are differences between the VNF Guidelines and SWA-001:
 
@@ -817,7 +820,7 @@ The following are differences between the VNF Guidelines and SWA-001:
    ONAP.
 
 Section 5.2 VNF Update and Upgrade
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  5.2.2 - ONAP will orchestrate updates and upgrades. The
    preferred method for updates and upgrades is to build a new instance
@@ -825,7 +828,7 @@ Section 5.2 VNF Update and Upgrade
    and kill the old instance.
 
 Section 5.3 VNF Properties
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following are differences between the VNF Guidelines and SWA-001:
 
@@ -850,7 +853,7 @@ The following are differences between the VNF Guidelines and SWA-001:
    VNFCs but it encourages the minimization of stateful VNFCs.
 
 Section 5.4 Attributes describing VNF Requirements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Attributes described in the VNF Guidelines and reference documents
 include those attributes defined in this section of the SWA 001 document
@@ -893,7 +896,7 @@ but also include additional attributes.
 .. [10]
    “Architectural Framework”, ETSI GS NFV 002 (v1.1.1) Oct. 2013)
 
-.. |image0| image:: VNF_Control_Loop.jpg
+.. |image0| image:: ONAP_VNF_Control_Loop.jpg
    :width: 6.56250in
    :height: 3.69167in
 .. |image1| image:: VNF_Lifecycle.jpg
