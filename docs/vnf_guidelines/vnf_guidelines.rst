@@ -801,7 +801,7 @@ differ from this section. The VNF Guidelines address a more specific
 scope than what is allowed in the SWA 001 document.
 
 Section 5.1 VNF Design Patterns
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following are differences between the VNF Guidelines and SWA-001:
 
@@ -820,7 +820,7 @@ The following are differences between the VNF Guidelines and SWA-001:
    ONAP.
 
 Section 5.2 VNF Update and Upgrade
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  5.2.2 - ONAP will orchestrate updates and upgrades. The
    preferred method for updates and upgrades is to build a new instance
