@@ -7,14 +7,15 @@
 ==============
 - This document focuses on setting and evolving VNF standards that will facilitate industry discussion, participation, alignment and evolution towards comprehensive and actionable VNF best practices and standard interface.
 - The goal is to accelerate adoption of VNF best practices which will increase innovation, minimize customization needed to onboard VNFs as well as reduce implementation complexity, time and cost for all impacted stakeholders.
-- The intent is do drive harmonization of VNFs across VNF providers, Network Cloud Service providers (NCSPs) and the overall Network Function Virtualization (NFV) ecosystem by providing both long term vision as well as short tem focus and clarity.
+- The intent is to drive harmonization of VNFs across VNF providers, Network Cloud Service providers (NCSPs) and the overall Network Function Virtualization (NFV) ecosystem by providing both long term vision as well as short tem focus and clarity.
 
 **2. Scope**
 ============
 - The audience for this document are VNF providers, NCSPs and other interested 3rd parties who need to know the design, build and lifecycle management requirements for VNFs to be compliant with ONAP.
 - These guidelines describe VNF environment and provide an overview of what the VNF developer needs to know to operate and be compliant with ONAP.
-- These guidelines are applicable to the Amsterdam release of ONAP.
-- Scope of the ONAP versions/release and future functionality
+- These guidelines contains high level expectations and references to specific requirements documentation for VNFs which are applicable to the Amsterdam release of ONAP.
+- Part of the guidelines also contains visionary recommendations for future functionality that could be desirable for ONAP future releases.
+- Conformance requirements are in the VNF Requirements document(http://onap.readthedocs.io/en/latest/submodules/vnfrqts/requirements.git/docs/index.html).
 
 **3. Introduction**
 ===================
@@ -566,6 +567,11 @@ build customization. Don’t create unique (snowflake) VNFs requiring any
 manual work or human attention to deploy. Do create standardized (Lego™)
 VNFs that can be deployed in a fully automated way.
 
+ONAP will orchestrate updates and upgrades of VNFs. One method for updates 
+and upgrades is to onboard and validate the new version, then build a new 
+instance with the new version of software,transfer traffic to that instance 
+and kill the old instance. There should be no need for the VNF or its 
+components to provide an update/upgrade mechanism.
 
 Automation
 ^^^^^^^^^^
@@ -680,6 +686,22 @@ The Network Cloud is expected to be tuned to support VNF performance
 requirements. Initially, specifics may differ per Network Cloud
 implementation and are expected to evolve over time, especially as the
 technology matures.
+
+Guest Operating Systems
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+All components in ONAP should be virtualized, preferably with support for 
+both virtual machines and containers. All components should be software-based 
+with no requirement on a specific hardware platform.
+
+To enable the compliance with security, audit, regulatory and other needs, NCSPs 
+may operate a limited set of  guest OS and CPU architectures and families,  virtual 
+machines, etc. 
+
+VNFCs should be agnostic to the details of the Network Cloud (such as hardware, host OS, 
+Hypervisor or container technology) and must run on the Network Cloud with acknowledgement 
+to the paradigm that the Network Cloud will continue to rapidly evolve and the underlying 
+components of the platform will change regularly.
 
 
 Compute Flavors
