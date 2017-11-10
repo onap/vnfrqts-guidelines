@@ -709,8 +709,8 @@ Compute Flavors
 
 VNFs should take advantage of the standard Network Cloud capabilities in
 terms of VM characteristics (often referred to as VM Flavors), VM sizes
-and cloud acceleration capabilities aimed at VNFs such as Intel’s Data
-Plane Development Kit (DPDK).
+and cloud acceleration capabilities aimed at VNFs such as Linux Foundation
+project Data Plane Development Kit (DPDK).
 
 **6. Summary**
 ===============
