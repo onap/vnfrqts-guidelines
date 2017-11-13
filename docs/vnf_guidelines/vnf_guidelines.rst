@@ -1,6 +1,15 @@
+.. This work is licensed under a Creative Commons Attribution 4.0 International License.
+.. http://creativecommons.org/licenses/by/4.0
+.. Copyright 2017 ONAP
+
+
 .. contents::
    :depth: 3
 ..
+
+==============
+VNF Guidelines
+==============
 
 
 **1. Purpose**
@@ -67,9 +76,9 @@ communities imply corresponding changes in processes at many industry
 collaboration bodies. With limited operational experience and much more
 dynamic requirements, open source communities are expected to evolve
 these VNF guidelines further before final documentation of those aspects
-necessary for standardization. This document and accompanying refer documents 
-provides VNF providers, NCSPs and other interested 3rd parties a set of 
-guidelines and requirements for the design, build and overall lifecycle 
+necessary for standardization. This document and accompanying refer documents
+provides VNF providers, NCSPs and other interested 3rd parties a set of
+guidelines and requirements for the design, build and overall lifecycle
 management of VNFs.
 
 **VNF Providers**
@@ -272,14 +281,14 @@ may also be assembled from VNF components (VNFCs) that each provide a
 reusable set of functionality. VNFs are expected to take advantage of
 platform provided common services.
 
-VNF management and control under ONAP is different but remain compatible 
-with the management and control exposed in the ETSI MANO model. With ONAP, 
+VNF management and control under ONAP is different but remain compatible
+with the management and control exposed in the ETSI MANO model. With ONAP,
 there are two ways to manage and control VNF. One is asking all VNF providers
 to take advantage of and interoperate with common control software, as
-loop indicates by the black arrows in figure 1. At the same time a 
+loop indicates by the black arrows in figure 1. At the same time a
 management and control architectural option exists for preserving legacy
-systems, e.g., ETSI MANO compatible VNFs can be controlled by third-party or 
-specific VNF Managers(VNFMs) and Element Management Systems (EMSs) provided 
+systems, e.g., ETSI MANO compatible VNFs can be controlled by third-party or
+specific VNF Managers(VNFMs) and Element Management Systems (EMSs) provided
 outside ONAP,as the loop indicates by the red arrows in figure 1.
 The ONAP is being made available as an open source project to reduce
 friction for VNF providers and enable new network functions to get to
@@ -653,10 +662,10 @@ environment will greatly depend on the ability to monitor and manage the
 behavior of Virtual Network Functions in real-time. ONAP platform
 must be able to monitor the health of the network and VNFs through
 collection of event and performance data directly from network resources
-utilizing standardized APIs or through EMS. The VNF provider must provide 
-visibility into VNF performance and fault at the VNFC level (VNFC is the 
-smallest granularity of functionality in our architecture) to allow ONAP 
-to proactively monitor, test, diagnose and trouble shoot the health and 
+utilizing standardized APIs or through EMS. The VNF provider must provide
+visibility into VNF performance and fault at the VNFC level (VNFC is the
+smallest granularity of functionality in our architecture) to allow ONAP
+to proactively monitor, test, diagnose and trouble shoot the health and
 behavior of VNFs at their source.
 
 Virtualization Environment Ready
@@ -740,8 +749,8 @@ these guidelines are expected to remain broadly applicable across a
 number of service providers interested in acquiring VNFs.
 
 We invite feedback on these VNF Guidelines in the context of the
-ONAP Project. We anticipate an ongoing project within the ONAP community 
-to maintain similar guidance for VNF developers to ONAP.Comments on these 
+ONAP Project. We anticipate an ongoing project within the ONAP community
+to maintain similar guidance for VNF developers to ONAP.Comments on these
 guidelines should be discussed there.
 
 **7. Appendix**
