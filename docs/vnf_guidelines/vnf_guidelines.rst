@@ -7,30 +7,45 @@
    :depth: 3
 ..
 
-==================
 VNF/PNF Guidelines
 ==================
 
 
-**1. Purpose**
-==============
-- This document focuses on setting and evolving VNF/PNF standards that will facilitate industry discussion, participation, alignment and evolution towards comprehensive and actionable VNF/PNF best practices and standard interface.
-- The goal is to accelerate adoption of VNF/PNF best practices which will increase innovation, minimize customization needed to onboard VNFs/PNFs as well as reduce implementation complexity, time and cost for all impacted stakeholders.
-- The intent is to drive harmonization of VNFs/PNFs across VNF/PNF providers, Network Cloud Service providers (NCSPs) and the overall Network Function Virtualization (NFV) ecosystem by providing both long term vision as well as short tem focus and clarity.
+**Purpose**
+------------------------
+- This document focuses on setting and evolving VNF/PNF standards that
+  will facilitate industry discussion, participation, alignment and evolution
+  towards comprehensive and actionable VNF/PNF best practices and standard
+  interface.
+- The goal is to accelerate adoption of VNF/PNF best practices which will
+  increase innovation, minimize customization needed to onboard VNFs/PNFs as
+  well as reduce implementation complexity, time and cost for all impacted
+  stakeholders.
+- The intent is to drive harmonization of VNFs/PNFs across VNF/PNF providers,
+  Network Cloud Service providers (NCSPs) and the overall Network Function
+  Virtualization (NFV) ecosystem by providing both long term vision as well
+  as short tem focus and clarity.
 
-**2. Scope**
-============
-- The audience for this document are VNF/PNF providers, NCSPs and other interested 3rd parties who need to know the design, build and lifecycle management requirements for VNFs/PNFs to be compliant with ONAP.
-- These guidelines describe VNF environment and provide an overview of what the VNF developer needs to know to operate and be compliant with ONAP.
-- These guidelines contains high level expectations and references to specific requirements documentation for VNFs/PNFs which are applicable to the Beijing release of ONAP.
-- Part of the guidelines also contains visionary recommendations for future functionality that could be desirable for ONAP future releases.
-- Conformance requirements are in the VNF/PNF Requirements document(http://onap.readthedocs.io/en/latest/submodules/vnfrqts/requirements.git/docs/index.html).
+**Scope**
+--------------------
+- The audience for this document are VNF/PNF providers, NCSPs and other
+  interested 3rd parties who need to know the design, build and lifecycle
+  management requirements for VNFs/PNFs to be compliant with ONAP.
+- These guidelines describe VNF environment and provide an overview of
+  what the VNF developer needs to know to operate and be compliant with ONAP.
+- These guidelines contains high level expectations and references to
+  specific requirements documentation for VNFs/PNFs which are applicable
+  to the Beijing release of ONAP.
+- Part of the guidelines also contains visionary recommendations for
+  future functionality that could be desirable for ONAP future releases.
+- Conformance requirements are in the VNF/PNF Requirements
+  document(http://onap.readthedocs.io/en/latest/submodules/vnfrqts/requirements.git/docs/index.html).
 
-**3. Introduction**
-===================
+**Introduction**
+-------------------------------
 
-a. Motivation
--------------
+Motivation
+^^^^^^^^^^^^^^^^^^^^
 
 The requirements and guidelines defined herein are intended to
 facilitate industry discussion, participation alignment and evolution
@@ -65,8 +80,8 @@ to the NFV ecosystems such as:
 
 -  Usage based software licensing for end-user consumers and NCSPs
 
-b. Audience
------------
+Audience
+^^^^^^^^^^^^
 
 The industry transformation associated with softwarization [1]_ results
 in a number of changes in traditional approaches for industry
@@ -118,20 +133,21 @@ NCSPs to more rapidly deliver increased functionality, for execution on
 white box hardware on customer’s premises – such functionality may be of
 particular interest to enterprises supporting similar infrastructure.
 
-c. Program and Document Structure
----------------------------------
+Program and Document Structure
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This document is part of a hierarchy of documents that describes the
 overall Requirements and Guidelines for ONAP. The diagram below
 identifies where this document fits in the hierarchy.
 
-+--------------------------------------------------------------------------------------------------+
-| ONAP Requirements and Guidelines                                                                 |
-+=======================+==========================================================================+
-| VNF/PNF Guidelines    | Future ONAP Subject Documents                                            |
-+-----------------------+---------------------------------------+----------------------------------+
-| VNF/PNF Requirements  | Future VNF/PNF Requirements Documents | Future Requirements Documents    |
-+-----------------------+---------------------------------------+----------------------------------+
++-------------------------------------------------------------------------+
+| ONAP Requirements and Guidelines                                        |
++=======================+=================================================+
+| VNF/PNF Guidelines    | Future ONAP Subject Documents                   |
++-----------------------+-------------------------+-----------------------+
+| VNF/PNF Requirements  | Future VNF/PNF          | Future Requirements   |
+|                       | Requirements Documents  | Documents             |
++-----------------------+-------------------------+-----------------------+
 
 Document summary:
 
@@ -153,13 +169,13 @@ Document summary:
    compatible with ONAP.
 
 
-d. Acronyms and Definitions
-----------------------------
+Acronyms and Definitions
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Refer to Appendix A - Glossary
 
 
-**4. VNF Context**
-==================
+**VNF Context**
+----------------------------------------
 
 A technology trend towards softwarization is impacting the
 communications industry as it has already impacted a number of other
@@ -213,8 +229,8 @@ additional virtualization environments. Some VNFs may scale across all
 these environments, but all VNFs should onboard through the same process
 before deployment to the targeted virtualization environment.
 
-a. Business Process Impacts
----------------------------
+Business Process Impacts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Business process changes need to occur in order to realize full benefits
 of VNF characteristics: efficiency via automation, open source reliance,
@@ -271,8 +287,8 @@ ONAP and Network Clouds are all expected to evolve towards
 continuous integration, testing and deployment of small incremental
 changes to de-risk the upgrade process.
 
-b. ETSI Network Function Virtualization (NFV) comparison
----------------------------------------------------------
+ETSI Network Function Virtualization (NFV) comparison
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ETSI defines a VNF as an implementation of a network function that can
 be deployed on a Network Function Virtualization Infrastructure (NFVI).
@@ -295,13 +311,6 @@ friction for VNF providers and enable new network functions to get to
 market faster and with lower costs.
 
 
-
-
-
-
-
-
-
 **Figure 1** shows a simplified ONAP and Infrastructure view to
 highlight how individual Virtual Network Functions plug into the
 ONAP control loops.
@@ -321,8 +330,8 @@ For a detailed comparison between ETSI NFV and ONAP, refer to
 Appendix C - Comparison between VNF Guidelines and ETSI GS NFV-SWA 001.
 
 
-c. Evolving towards VNFs
-------------------------
+Evolving towards VNFs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In order to deploy VNFs, a target virtualization environment must
 already be in place. The NCSPs scale necessitates a phased rollout of
@@ -348,8 +357,8 @@ virtualized environments. Much of the functionality associated with 5G
 deployed as VNFs in targeted virtualization infrastructure towards the
 edge of the network.
 
-**5. VNF Characteristics**
-==========================
+**VNF Characteristics**
+-------------------------------------------------------
 
 VNFs need to be constructed using a distributed systems architecture
 that we will call "Network Cloud Ready". They need to interact with the
@@ -384,8 +393,8 @@ grouped into three areas:
 Detailed requirements are contained in the reference documents that are
 listed in Appendix B - References.
 
-a. VNF Development
--------------------
+VNF Development
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 VNFs should be designed to operate within a cloud environment from the
 first stages of the development. The VNF provider should think clearly
@@ -400,8 +409,8 @@ Provider also needs to think about how they will integrate and deploy
 new versions of the VNF. Since the cloud environment is very dynamic,
 the developer should utilize DevOps practices to deploy new software.
 
-Detailed requirements for VNF Development can be found in the *VNF Requirements*
-document.
+Detailed requirements for VNF Development can be found in the
+*VNF Requirements* document.
 
 VNF Design
 ~~~~~~~~~~
@@ -421,7 +430,7 @@ module can be thought of as a deployment unit. In general the goal should
 be for each module to contain a single VNFC.
 
 Single Capability
-^^^^^^^^^^^^^^^^^
++++++++++++++++++++
 
 VNFs should be carefully decomposed into loosely coupled, granular,
 re-usable VNFCs that can be distributed and scaled on a Network Cloud.
@@ -435,7 +444,7 @@ so small that the overhead of constructing, maintaining, and operating
 the service outweighs its utility.
 
 Independence
-^^^^^^^^^^^^
++++++++++++++++
 
 VNFCs should be independently deployed, configured, upgraded, scaled,
 monitored, and administered (by ONAP). The VNFC must be a
@@ -448,7 +457,7 @@ interface change. API versioning enables smoother evolution while
 preserving backward compatibility.
 
 Scaling
-^^^^^^^
++++++++++++
 
 Each VNFC within a VNF must support independent horizontal scaling, by
 adding/removing instances, in response to demand loads on that VNFC. The
@@ -460,7 +469,7 @@ another component to be scaled at the same time. All scaling will be
 controlled by ONAP.
 
 Managing State
-^^^^^^^^^^^^^^
+++++++++++++++++++++++++
 
 VNFCs and their interfaces should isolate and manage state to allow for
 high-reliability, scalability, and performance in a Network Cloud
@@ -476,14 +485,14 @@ still meet all the performance and resiliency requirements of the
 service.
 
 Lightweight and Open APIs
-^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 Key functions are accessible via open APIs, which align to Industry API
 Standards and supported by an open and extensible information/data
 model.
 
 Reusability
-^^^^^^^^^^^
+++++++++++++++++++++++++
 
 Properly (de)composing a VNF requires thinking about “reusability”.
 Components should be designed to be reusable within the VNF as well as
@@ -557,7 +566,7 @@ evolve in the same direction, enabling agile delivering of end-to-end
 services.
 
 Testing
-^^^^^^^
+++++++++++++++++++++++++
 
 VNF packages should provide comprehensive automated regression,
 performance and reliability testing with VNFs based on open industry
@@ -566,7 +575,7 @@ acceptance and diagnostic tests and in-service instrumentation to be
 used in production to validate VNF operation.
 
 Build and Deployment Processes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 VNF packages should include continuous integration and continuous
 deployment (CI/CD) software artifacts that utilize automated open
@@ -576,14 +585,14 @@ build customization. Don’t create unique (snowflake) VNFs requiring any
 manual work or human attention to deploy. Do create standardized (Lego™)
 VNFs that can be deployed in a fully automated way.
 
-ONAP will orchestrate updates and upgrades of VNFs. One method for updates 
-and upgrades is to onboard and validate the new version, then build a new 
-instance with the new version of software,transfer traffic to that instance 
-and kill the old instance. There should be no need for the VNF or its 
+ONAP will orchestrate updates and upgrades of VNFs. One method for updates
+and upgrades is to onboard and validate the new version, then build a new
+instance with the new version of software,transfer traffic to that instance
+and kill the old instance. There should be no need for the VNF or its
 components to provide an update/upgrade mechanism.
 
 Automation
-^^^^^^^^^^
+++++++++++++++++++++++++
 
 Increased automation is enabled by VNFs and VNF design and composition.
 VNF and VNFCs should provide the following automation capabilities, as
@@ -597,8 +606,8 @@ triggered or managed via ONAP:
 
 -  Configuration
 
-b. ONAP Ready
----------------
+ONAP Ready
+^^^^^^^^^^^^^^^^^^^^^^
 
 ONAP is the “brain” providing the lifecycle management and control
 of software-centric network resources, infrastructure and services.
@@ -669,7 +678,7 @@ to proactively monitor, test, diagnose and trouble shoot the health and
 behavior of VNFs at their source.
 
 Virtualization Environment Ready
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Every Network Cloud Service Provider will have a different set of
 resources and capabilities for their Network Cloud, but there are some
@@ -699,17 +708,18 @@ technology matures.
 Guest Operating Systems
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-All components in ONAP should be virtualized, preferably with support for 
-both virtual machines and containers. All components should be software-based 
+All components in ONAP should be virtualized, preferably with support for
+both virtual machines and containers. All components should be software-based
 with no requirement on a specific hardware platform.
 
-To enable the compliance with security, audit, regulatory and other needs, NCSPs 
-may operate a limited set of  guest OS and CPU architectures and families,  virtual 
-machines, etc. 
+To enable the compliance with security, audit, regulatory and
+other needs, NCSPs may operate a limited set of  guest OS and
+CPU architectures and families, virtual machines, etc.
 
-VNFCs should be agnostic to the details of the Network Cloud (such as hardware, host OS, 
-Hypervisor or container technology) and must run on the Network Cloud with acknowledgement 
-to the paradigm that the Network Cloud will continue to rapidly evolve and the underlying 
+VNFCs should be agnostic to the details of the Network Cloud (such as
+hardware, host OS, Hypervisor or container technology) and must run on
+the Network Cloud with acknowledgement to the paradigm that the Network
+Cloud will continue to rapidly evolve and the underlying
 components of the platform will change regularly.
 
 
@@ -721,13 +731,201 @@ terms of VM characteristics (often referred to as VM Flavors), VM sizes
 and cloud acceleration capabilities aimed at VNFs such as Linux Foundation
 project Data Plane Development Kit (DPDK).
 
-**6. PNF Context**
-==================
+**PNF Characteristics**
+----------------------------------------
+
+Physical Network Functions (PNF) are a vendor-provided Network Function(s)
+implemented using a set of software modules deployed on a dedicated
+hardware element while VNFs utilize cloud resources to provide Network
+Functions through virtualized software modules.
+
+PNFs can be supplied by a vendor as a Black Box (provides no knowledge
+of its internal characteristics, logic, and software design/architecture)
+or as a White Box (provides detailed knowledge and access of its internal
+components and logic) or as a Grey Box (provides limited knowledge and
+access to its internal components).  Also note that the PNF hardware and
+the software running on it could come from the same vendor or different
+vendors.
+
+PNFs need to be chained with VNFs to design and deploy more complex end
+to end services that span across Network Clouds. PNF should have the
+following characteristics.
+
+Cloud Integration
+^^^^^^^^^^^^^^^^^^^
+
+Although the goal is to virtualize network functions within a service
+chain, there will be certain network functions in the near term or even
+in the end state that would remain physical (e.g., 5G radio functions,
+ROADM, vOLT, AR/CR appliances etc.). PNFs must be designed to allow
+their seamless integration with Network Clouds and complement end to
+end service requirements for resiliency, scalability, upgrades, and
+security.
 
 
+PNF Design
+^^^^^^^^^^^^^^^^^^^
 
-**7. Summary**
-===============
+A PNF provides one or more network functions on a dedicated hardware
+box. PNFs are expected to evolve to Virtualized Network Functions and
+their current design should facilitate their future virtualization.
+The software modules and corresponding hardware should be packaged
+together to provide the desired Network Functions. However, it is not
+required for the software modules and hardware to be provided by a
+single vendor. PNFs are deployed through Service Provider’s installation
+and commission procedure. Virtualized instantiation processes flows
+such as OpenStack HHEAT are not utilized and PNFs are instantiated
+when they are powered up and connected to ONAP. PNFs must provide
+access to its software modules and management functions through
+open APIs.
+
+
+Scaling
+^^^^^^^^^^^
+
+Horizontal scaling for PNFs would not be the logical approach and they
+need to be scaled up vertically by increasing computing hardware
+resources (e.g. cpu, memory). Vertical scaling of PNFs will need to
+follow Service Provider’s hardware upgrade processes and procedures.
+
+Managing State
+^^^^^^^^^^^^^^^^^
+
+Software modules and their interfaces should be able to monitor and
+manage their state to allow high-reliability, performance, and
+high-availability (active-active or stand by) as needed by overriding
+services. At this time, PNF data store should be replicated in the back
+up hardware to allow fail overs for both active-active and stand by
+high-availability methods.
+
+Resiliency
+^^^^^^^^^^^^^
+
+The PNF is responsible for meeting its resiliency goals with the use
+of redundant physical infrastructure.  The PNF developer should design
+the function in such a way that if there is a physical platform problem
+the PNF will continue working as needed and meet the SLAs of that
+function. PNFs should be designed to survive single failure platform
+problems including: processor, memory, NIC, datacenter outages, etc.
+The PNF should support tools for gracefully meeting the service needs
+such as methods for migrating traffic between PNF’s and draining
+traffic from a PNF.
+
+DevOps
+^^^^^^^^
+
+The ONAP software development and deployment methodology is evolving
+toward a DevOps model. PNF development and deployment should evolve in the
+same direction, enabling agile delivering of end-to-end services.
+
+Testing
+^^^^^^^^^^^
+
+PNF packages should provide comprehensive automated regression, performance
+and reliability testing with PNFs based on open industry standard testing
+tools and methodologies. PNF packages should provide acceptance and diagnostic
+tests and in-service instrumentation to be used in production to validate
+PNF operation.
+
+Build and Deployment Processes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+PNF packages should include continuous integration and continuous deployment
+(CI/CD) software artifacts that utilize automated open industry standard
+system and container build tools. The PNF package should include
+parameterized configuration variables to enable automated build
+customization. Don’t create unique (snowflake) PNFs requiring any
+manual work or human attention to deploy. Do create standardized
+(Lego™) PNFs that can be deployed in a fully automated way.
+ONAP will orchestrate updates and upgrades of PNFs. One method
+for updates and upgrades is to onboard and validate the new version,
+then build a new instance with the new version of software, transfer
+traffic to that instance and kill the old instance. There should be
+no need for the PNF or its components to provide an update/upgrade
+mechanism.
+
+Automation
+^^^^^^^^^^^^^^^^^^^
+
+Increased automation is enabled by PNFs and PNF design and composition.
+PNF should provide the following automation capabilities, as triggered
+or managed via ONAP:
+
+- Events and alarms
+- Lifecycle events
+- Zero-Touch rolling upgrades and downgrades
+- Configuration
+
+ONAP Ready
+^^^^^^^^^^^^^^^^^^^
+
+PNF and VNF lifecycles are fundamentally managed the same way utilizing
+ONAP onboarding, configuration, and monitoring capabilities. The main
+difference is related to the processes and methods used for deployment
+and instantiation of these resources. PNFs are first installed in the
+target location utilizing Service Provider’s installation and commission
+procedures that includes manual activities. Next, any additional software
+module will be downloaded to the physical hardware and started utilizing
+the required APIs. On the other had VNF deployment and instantiation are
+orchestrated by ONAP utilizing the underlying Network Cloud orchestration
+and APIs.
+
+Design Definition
+^^^^^^^^^^^^^^^^^^^
+
+It is intended to onboard PNF packages into ONAP using the same processes
+and tools as VNFs to reduce the need for customization based on the Network
+Function underlying infrastructure. The main difference is associated with
+the content of the Package that describes the required information for
+lifecycle management of the Network Function. For instance, PNF packages
+will not include any information related to the Network Cloud infrastructure
+such as HEAT templates.
+
+Configuration Management
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The configuration for both PNFs and VNFs are managed utilizing common
+orchestration capabilities and standardized resource interfaces supported
+by ONAP. PNFs must allow direct configuration management interfaces to
+ONAP without any needs for an EMS support.
+
+Monitoring and Management
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+PNFs must allow ONAP to directly collect event and performance data without
+the aid of any EMSs to monitor PNF health and behavior. ONAP requires common
+standardized models and interfaces to support collection of events and data
+streams for both VNFs and PNFs and the vendors must be able to support these
+requirements.
+
+Computing Environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Network functions implemented over dedicated physical hardware will
+eventually be virtualized over Network Cloud infrastructure. However,
+this transition will take place over time and there is a need to support
+this integrated network functions in various forms until complete
+virtualization is achieved. The integrated solution may come in the
+form of a tightly bundled package from a single provider referred to
+as black box in this document. In this configuration, the software
+modules will not be directly managed by an external management
+system and the bundled package is managed utilizing standardized open
+APIs provided by the vendor.
+
+In an alternative configuration, the internal software modules are
+not tightly coupled with physical hardware and can be directly
+accessed, extended, and managed by an external management system
+through standardized interfaces. Each software module can be provided
+by different vendors and loaded onto the underlying hardware. This
+configuration is referred to as a white box in this document.
+
+A gray box configuration provides direct access and manageability
+only to a subset of software modules that are loaded on top of a
+basic bundled package.
+
+
+**Summary**
+---------------------------------------
 
 The intent of these guidelines and requirements is to provide long term
 vision as well as short term focus and clarity where no current open
@@ -758,44 +956,98 @@ ONAP Project. We anticipate an ongoing project within the ONAP community
 to maintain similar guidance for VNF developers to ONAP.Comments on these
 guidelines should be discussed there.
 
-**7. Appendix**
-===============
+**Appendix**
+-----------------------------------
 
-a.  Glossary
--------------
+Glossary
+^^^^^^^^^^^^^^^^^^
 
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Heat                                | Heat is a service to orchestrate composite cloud applications using a declarative template format through an OpenStack-native REST API.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| TOSCA                               | Topology and Orchestration Specification for Cloud Applications (OASIS spec)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Network Clouds                      | Network Clouds are built on a framework containing these essential elements: refactoring hardware elements into software functions running on commodity cloud computing infrastructure; aligning access, core, and edge networks with the traffic patterns created by IP based services; integrating the network and cloud technologies on a software platform that enables rapid, highly automated, deployment and management of services, and software defined control so that both infrastructure and functions can be optimized across change in service demand and infrastructure availability; and increasing competencies in software integration and a DevOps operations model. |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Network Cloud Service Provider      | Network Cloud Service Provider (NCSP) is a company or organization, making use of a communications network to provide Network Cloud services on a commercial basis to third parties.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SDOs                                | Standards Developing Organizations are organizations which are active in the development of standards intended to address the needs of a group of affected adopters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Softwarization                      | Softwarization is the transformation of business processes to reflect characteristics of software centric products, services, lifecycles, and methods.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Targeted Virtualization Environment | Targeted Virtualization Environment is the execution environment for VNFs. While Network Clouds located in datacenters are a common execution environment, VNFs can and will be deployed in various locations (e.g., non-datacenter environments) and form factors (e.g., enterprise Customer Premise Equipment). Non-datacenter environments are expected to be available at more distributed network locations including central offices and at the edge of the NCSP’s infrastructure.                                                                                                                                                                                                |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| VM                                  | Virtual Machine (VM) is a virtualized computation environment that behaves very much like a physical computer/server. A VM has all its ingredients (processor, memory/storage, interfaces/ports) of a physical computer/server and is generated by a hypervisor, which partitions the underlying physical resources and allocates them to VMs. Virtual Machines are capable of hosting a virtual network function component (VNFC).                                                                                                                                                                                                                                                     |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| VNF                                 | Virtual Network Function (VNF) is the software implementation of a function that can be deployed on a Network Cloud. It includes network functions that provide transport and forwarding. It also includes other functions when used to support network services, such as network-supporting web servers and database.                                                                                                                                                                                                                                                                                                                                                                  |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| VNFC                                | Virtual Network Function Component (VNFC) are the sub-components of a VNF providing a VNF Provider a defined sub-set of that VNF's functionality, with the main characteristic that a single instance of this component maps 1:1 against a single Virtualization Container. See Figure 3 for the relationship between VNFC and VNFs.                                                                                                                                                                                                                                                                                                                                                    |
-|                                     | |image2|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| PNF                                 | PNF is a vendor-provided Network Function(s) implemented using a bundled set of hardware and software.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------+-------------------------------------------------------+
+| Heat               | Heat is a service to orchestrate composite cloud      |
+|                    | applications using a declarative template format      |
+|                    | through an OpenStack-native REST API.                 |
++--------------------+-------------------------------------------------------+
+| TOSCA              | Topology and Orchestration Specification for Cloud    |
+|                    | Applications (OASIS spec)                             |
++--------------------+-------------------------------------------------------+
+| Network Clouds     | Network Clouds are built on a framework containing    |
+|                    | these essential elements: refactoring hardware        |
+|                    | elements into software functions running on commodity |
+|                    | cloud computing infrastructure; aligning access, core,|
+|                    | and edge networks with the traffic patterns created by|
+|                    | IP based services; integrating the network and cloud  |
+|                    | technologies on a software platform that enables      |
+|                    | rapid, highly automated, deployment and management of |
+|                    | services, and software defined control so that both   |
+|                    | infrastructure and functions can be optimized across  |
+|                    | change in service demand and infrastructure           |
+|                    | availability; and increasing competencies in software |
+|                    | integration and a DevOps operations model.            |
++--------------------+-------------------------------------------------------+
+| Network Cloud      | Network Cloud Service Provider (NCSP) is a company or |
+| Service Provider   | organization, making use of a communications network  |
+|                    | to provide Network Cloud services on a commercial     |
+|                    | basis to third parties.                               |
++--------------------+-------------------------------------------------------+
+| SDOs               | Standards Developing Organizations are organizations  |
+|                    | which are active in the development of standards      |
+|                    | intended to address the needs of a group of affected  |
+|                    | adopters.                                             |
++--------------------+-------------------------------------------------------+
+| Softwarization     | Softwarization is the transformation of business      |
+|                    | processes to reflect characteristics of software      |
+|                    | centric products, services, lifecycles, and methods.  |
++--------------------+-------------------------------------------------------+
+| Targeted           | Targeted Virtualization Environment is the execution  |
+| Virtualization     | environment for VNFs. While Network Clouds located in |
+| Environment        | datacenters are a common execution environment, VNFs  |
+|                    | can and will be deployed in various locations (e.g.,  |
+|                    | non-datacenter environments) and form factors (e.g.,  |
+|                    | enterprise Customer Premise Equipment). Non-datacenter|
+|                    | environments are expected to be available at more     |
+|                    | distributed network locations including central       |
+|                    | offices and at the edge of the NCSP’s infrastructure. |
++--------------------+-------------------------------------------------------+
+| VM                 | Virtual Machine (VM) is a virtualized computation     |
+|                    | environment that behaves very much like a physical    |
+|                    | computer/server. A VM has all its ingredients         |
+|                    | (processor, memory/storage, interfaces/ports) of a    |
+|                    | physical computer/server and is generated by a        |
+|                    | hypervisor, which partitions the underlying physical  |
+|                    | resources and allocates them to VMs. Virtual Machines |
+|                    | are capable of hosting a virtual network function     |
+|                    | component (VNFC).                                     |
++--------------------+-------------------------------------------------------+
+| VNF                | Virtual Network Function (VNF) is the software        |
+|                    | implementation of a function that can be deployed on a|
+|                    | Network Cloud. It includes network functions that     |
+|                    | provide transport and forwarding. It also includes    |
+|                    | other functions when used to support network services,|
+|                    | such as network-supporting web servers and database.  |
++--------------------+-------------------------------------------------------+
+| VNFC               | Virtual Network Function Component (VNFC) are the     |
+|                    | sub-components of a VNF providing a VNF Provider a    |
+|                    | defined sub-set of that VNF's functionality, with the |
+|                    | main characteristic that a single instance of this    |
+|                    | component maps 1:1 against a single Virtualization    |
+|                    | Container. See Figure 3 for the relationship between  |
+|                    | VNFC and VNFs.                                        |
+|                    |                                                       |
+|                    | |image2|                                              |
++--------------------+-------------------------------------------------------+
+| PNF                | PNF is a vendor-provided Network Function(s)          |
+|                    | implemented using a bundled set of hardware and       |
+|                    | software.                                             |
++--------------------+-------------------------------------------------------+
 
-b.  References
----------------
+References
+^^^^^^^^^^^^^
 
 1. VNF Requirements
 
-c.  Comparison between VNF Guidelines and ETSI GS NFV-SWA 001
---------------------------------------------------------------
+Comparison between VNF Guidelines and ETSI GS NFV-SWA 001
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 The VNF guidelines presented in this document (VNF Guidelines) overlap
 with the ETSI GS NFV-SWA 001 (Network Functions Virtualization (NFV);
@@ -839,7 +1091,7 @@ differ from this section. The VNF Guidelines address a more specific
 scope than what is allowed in the SWA 001 document.
 
 Section 5.1 VNF Design Patterns
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++
 
 The following are differences between the VNF Guidelines and SWA-001:
 
@@ -858,7 +1110,7 @@ The following are differences between the VNF Guidelines and SWA-001:
    ONAP.
 
 Section 5.2 VNF Update and Upgrade
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++
 
 -  5.2.2 - ONAP will orchestrate updates and upgrades. The
    preferred method for updates and upgrades is to build a new instance
@@ -866,7 +1118,7 @@ Section 5.2 VNF Update and Upgrade
    and kill the old instance.
 
 Section 5.3 VNF Properties
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++
 
 The following are differences between the VNF Guidelines and SWA-001:
 
@@ -891,11 +1143,12 @@ The following are differences between the VNF Guidelines and SWA-001:
    VNFCs but it encourages the minimization of stateful VNFCs.
 
 Section 5.4 Attributes describing VNF Requirements
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Attributes described in the VNF Guidelines and reference documents
 include those attributes defined in this section of the SWA 001 document
 but also include additional attributes.
+
 
 
 .. [1]
