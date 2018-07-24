@@ -7,8 +7,34 @@
    :depth: 3
 ..
 
+<<<<<<< HEAD
 VNF/PNF Guidelines
 ==================
+=======
+<<<<<<< HEAD
+VNF/PNF Guidelines
+==================
+=======
+==============
+VNF Guidelines
+==============
+
+
+**1. Purpose**
+==============
+- This document focuses on setting and evolving VNF standards that will facilitate industry discussion, participation, alignment and evolution towards comprehensive and actionable VNF best practices and standard interface.
+- The goal is to accelerate adoption of VNF best practices which will increase innovation, minimize customization needed to onboard VNFs as well as reduce implementation complexity, time and cost for all impacted stakeholders.
+- The intent is to drive harmonization of VNFs across VNF providers, Network Cloud Service providers (NCSPs) and the overall Network Function Virtualization (NFV) ecosystem by providing both long term vision as well as short tem focus and clarity.
+
+**2. Scope**
+============
+- The audience for this document are VNF providers, NCSPs and other interested 3rd parties who need to know the design, build and lifecycle management requirements for VNFs to be compliant with ONAP.
+- These guidelines describe VNF environment and provide an overview of what the VNF developer needs to know to operate and be compliant with ONAP.
+- These guidelines contains high level expectations and references to specific requirements documentation for VNFs which are applicable to the Amsterdam release of ONAP.
+- Part of the guidelines also contains visionary recommendations for future functionality that could be desirable for ONAP future releases.
+- Conformance requirements are in the `VNF Requirements <http://onap.readthedocs.io/en/amsterdam/submodules/vnfrqts/requirements.git/docs/index.html>`_.
+>>>>>>> db9fd3f... VNFRQTS - Updating the links and formatting
+>>>>>>> f07452a... VNFRQTS - Updating links and formatting
 
 
 **Purpose**
@@ -238,7 +264,7 @@ and improved cycle time through careful design.
 
 **Efficiency via Automation**
 
-reliant on human labor for critical operational tasks don’t scale. By
+Reliant on human labor for critical operational tasks don’t scale. By
 aggressively automating all VNF operational procedures, VNFs have lower
 operational cost, are more rapidly deployed at scale and are more
 consistent in their operation. ONAP provides the automation
@@ -1161,8 +1187,8 @@ but also include additional attributes.
    (Dec 2012)
 
 .. [3]
-   European Telecommunications Standards Institute or ETSI
-   (http://www.etsi.org) is a respected standards body providing
+   European Telecommunications Standards Institute or `ETSI
+   <http://www.etsi.org>`_ is a respected standards body providing
    standards for information and communications technologies.
 
 .. [4]
@@ -1170,16 +1196,16 @@ but also include additional attributes.
    be needed to support traditional IT like workloads.
 
 .. [5]
-   xRAN (http://www.xran.org/)
+   `xRAN <http://www.xran.org/>`_
 
 .. [6]
-   OpenStack (http://www.openstack.org)
+   `OpenStack <http://www.openstack.org>`_
 
 .. [7]
-   OpenDaylight (http://www.opendaylight.org)
+   `OpenDaylight <http://www.opendaylight.org>`_
 
 .. [8]
-   OPNFV (http://www.opnfv.org)
+   `OPNFV <http://www.opnfv.org>`_
 
 .. [9]
    See, e.g., Figure 3 of GS NFV 002, Architectural Framework
