@@ -24,7 +24,7 @@ VNF Guidelines
 - These guidelines describe VNF environment and provide an overview of what the VNF developer needs to know to operate and be compliant with ONAP.
 - These guidelines contains high level expectations and references to specific requirements documentation for VNFs which are applicable to the Amsterdam release of ONAP.
 - Part of the guidelines also contains visionary recommendations for future functionality that could be desirable for ONAP future releases.
-- Conformance requirements are in the VNF Requirements document(http://onap.readthedocs.io/en/latest/submodules/vnfrqts/requirements.git/docs/index.html).
+- Conformance requirements are in the `VNF Requirements <http://onap.readthedocs.io/en/amsterdam/submodules/vnfrqts/requirements.git/docs/index.html>`_.
 
 **3. Introduction**
 ===================
@@ -897,12 +897,12 @@ but also include additional attributes.
    and methods.
 
 .. [2]
-   “ Virtual Network Functions Architecture” ETSI GS NFV-SWA 001 v1.1.1
+   “Virtual Network Functions Architecture” ETSI GS NFV-SWA 001 v1.1.1
    (Dec 2012)
 
 .. [3]
-   European Telecommunications Standards Institute or ETSI
-   (http://www.etsi.org) is a respected standards body providing
+   European Telecommunications Standards Institute or `ETSI
+   <http://www.etsi.org>`_ is a respected standards body providing
    standards for information and communications technologies.
 
 .. [4]
@@ -910,22 +910,20 @@ but also include additional attributes.
    be needed to support traditional IT like workloads.
 
 .. [5]
-   xRAN (http://www.xran.org/)
+   `xRAN <http://www.xran.org/>`_
 
 .. [6]
-   OpenStack (http://www.openstack.org)
+   `OpenStack <http://www.openstack.org>`_
 
 .. [7]
-   OpenDaylight (http://www.opendaylight.org)
+   `OpenDaylight <http://www.opendaylight.org>`_
 
 .. [8]
-   OPNFV (http://www.opnfv.org)
+   `OPNFV <http://www.opnfv.org>`_
 
 .. [9]
    See, e.g., Figure 3 of GS NFV 002, Architectural Framework
 
-.. [10]
-   “Architectural Framework”, ETSI GS NFV 002 (v1.1.1) Oct. 2013)
 
 .. |image0| image:: ONAP_VNF_Control_Loop.jpg
    :width: 6.56250in
