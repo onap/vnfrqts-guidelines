@@ -8,8 +8,6 @@ VNF Guidelines
 
 .. toctree::
    :titlesonly:
-   :maxdepth: 2
-   :numbered:
 
    vnf_guidelines
 
