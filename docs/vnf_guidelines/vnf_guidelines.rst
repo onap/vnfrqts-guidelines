@@ -38,8 +38,8 @@ VNF/PNF Guidelines
   to the Beijing release of ONAP.
 - Part of the guidelines also contains visionary recommendations for
   future functionality that could be desirable for ONAP future releases.
-- Conformance requirements are in the VNF/PNF Requirements
-  document(http://onap.readthedocs.io/en/latest/submodules/vnfrqts/requirements.git/docs/index.html).
+- Conformance requirements are in the `VNF/PNF Requirements
+  document <http://onap.readthedocs.io/en/beijing/submodules/vnfrqts/requirements.git/docs/index.html>`_.
 
 **Introduction**
 -------------------------------
@@ -153,14 +153,14 @@ Document summary:
 
 **VNF/PNF Guidelines**
 
--  Describes VNF/PNF environment and overview of requirements
+-  Describes VNF/PNF environment and overview of requirements.
 
 *VNF Requirements*
 
 -  VNF development readiness requirements (Design, Resiliency, Security,
-   and DevOps)
+   and DevOps).
 
--  Requirements for how VNFs interact and utilize ONAP
+-  Requirements for how VNFs interact and utilize ONAP.
 
 -  Provides recommendations and standards for building Heat templates
    compatible with ONAP.
@@ -425,7 +425,7 @@ Independence, State and the APIs.
 
 Many Network Clouds will use Heat and TOSCA to describe orchestration
 templates for instantiating VNFs and VNFCs. Heat and TOSCA has a useful
-abstraction called a “module” that can contain one or more VNFCs. A
+abstraction called a "module" that can contain one or more VNFCs. A
 module can be thought of as a deployment unit. In general the goal should
 be for each module to contain a single VNFC.
 
@@ -494,9 +494,9 @@ model.
 Reusability
 ++++++++++++++++++++++++
 
-Properly (de)composing a VNF requires thinking about “reusability”.
+Properly (de)composing a VNF requires thinking about "reusability".
 Components should be designed to be reusable within the VNF as well as
-by other VNFs. The “single capability” principle aids in this
+by other VNFs. The "single capability" principle aids in this
 requirement. If a VNFC could be reusable by other VNFs then it should be
 designed as its own single component VNF that may then be chained with
 other VNFs. Likewise, a VNF provider should make use of other common
@@ -609,7 +609,7 @@ triggered or managed via ONAP:
 ONAP Ready
 ^^^^^^^^^^^^^^^^^^^^^^
 
-ONAP is the “brain” providing the lifecycle management and control
+ONAP is the "brain" providing the lifecycle management and control
 of software-centric network resources, infrastructure and services.
 ONAP is critical in achieving the objectives to increase the value
 of the Network Cloud to customers by rapidly on-boarding new services,
@@ -968,7 +968,7 @@ Glossary
 |                    | through an OpenStack-native REST API.                 |
 +--------------------+-------------------------------------------------------+
 | TOSCA              | Topology and Orchestration Specification for Cloud    |
-|                    | Applications (OASIS spec)                             |
+|                    | Applications (OASIS spec).                            |
 +--------------------+-------------------------------------------------------+
 | Network Clouds     | Network Clouds are built on a framework containing    |
 |                    | these essential elements: refactoring hardware        |
@@ -1096,7 +1096,7 @@ Section 5.1 VNF Design Patterns
 The following are differences between the VNF Guidelines and SWA-001:
 
 -  5.1.2 - The Network Cloud does not recognize the distinction between
-   “parallelizable” and “non-parallelizable” VNFCs, where parallelizable
+   "parallelizable" and "non-parallelizable" VNFCs, where parallelizable
    means that there can be multiple instances of the VNFC. In the VNF
    Guidelines, all VNFCs should support multiple instances and therefore
    be parallelizable.
@@ -1122,12 +1122,12 @@ Section 5.3 VNF Properties
 
 The following are differences between the VNF Guidelines and SWA-001:
 
--  5.3.1 - In a Network Cloud all VNFs must be only “COTS-Ready”. The
-   VNF Guidelines does not support “Partly COTS-READY” or “Hardware
-   Dependent”.
+-  5.3.1 - In a Network Cloud all VNFs must be only "COTS-Ready". The
+   VNF Guidelines does not support "Partly COTS-READY" or "Hardware
+   Dependent".
 
 -  5.3.2 – The only virtualization environment currently supported by
-   ONAP is “Virtual Machines”. The VNF Guidelines state that all
+   ONAP is "Virtual Machines". The VNF Guidelines state that all
    VNFs should be hypervisor agnostic. Other virtualized environment
    options such as containers are not currently supported. However,
    container technology is targeted to be supported in the future.
@@ -1157,12 +1157,12 @@ but also include additional attributes.
    and methods.
 
 .. [2]
-   “ Virtual Network Functions Architecture” ETSI GS NFV-SWA 001 v1.1.1
+   "Virtual Network Functions Architecture" ETSI GS NFV-SWA 001 v1.1.1
    (Dec 2012)
 
 .. [3]
-   European Telecommunications Standards Institute or ETSI
-   (http://www.etsi.org) is a respected standards body providing
+   European Telecommunications Standards Institute or `ETSI
+   <http://www.etsi.org>`_ is a respected standards body providing
    standards for information and communications technologies.
 
 .. [4]
@@ -1170,16 +1170,16 @@ but also include additional attributes.
    be needed to support traditional IT like workloads.
 
 .. [5]
-   xRAN (http://www.xran.org/)
+   `xRAN <http://www.xran.org/>`_
 
 .. [6]
-   OpenStack (http://www.openstack.org)
+   `OpenStack <http://www.openstack.org>`_
 
 .. [7]
-   OpenDaylight (http://www.opendaylight.org)
+   `OpenDaylight <http://www.opendaylight.org>`_
 
 .. [8]
-   OPNFV (http://www.opnfv.org)
+   `OPNFV <http://www.opnfv.org>`_
 
 .. [9]
    See, e.g., Figure 3 of GS NFV 002, Architectural Framework
@@ -1187,9 +1187,11 @@ but also include additional attributes.
 .. |image0| image:: ONAP_VNF_Control_Loop.jpg
    :width: 6.56250in
    :height: 3.69167in
+
 .. |image1| image:: VNF_Lifecycle.jpg
    :width: 6.49000in
    :height: 2.23000in
+
 .. |image2| image:: VNF_VNFC_Relation.jpg
    :width: 4.26087in
    :height: 3.42514in
