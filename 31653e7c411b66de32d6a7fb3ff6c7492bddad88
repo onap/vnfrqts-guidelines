@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_1510674d",
+        "filename": "docs/vnf_guidelines/vnf_guidelines.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 971,
+      "author": {
+        "id": 3999
+      },
+      "writtenOn": "2018-08-02T20:24:39Z",
+      "side": 1,
+      "message": "If we\u0027re going to use another acronym in the defintion (NFV-I), then we should probably define it in the table as well.",
+      "revId": "31653e7c411b66de32d6a7fb3ff6c7492bddad88",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
