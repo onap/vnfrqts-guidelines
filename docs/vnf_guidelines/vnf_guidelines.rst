@@ -45,7 +45,7 @@ VNF/PNF Guidelines
   what the VNF developer needs to know to operate and be compliant with ONAP.
 - These guidelines contains high level expectations and references to
   specific requirements documentation for VNFs/PNFs which are applicable
-  to the Beijing release of ONAP.
+  to the current release of ONAP.
 - Part of the guidelines also contains visionary recommendations for
   future functionality that could be desirable for ONAP future releases.
 - Conformance requirements are in the `VNF/PNF Requirements
