@@ -13,9 +13,10 @@
    limitations under the License.
 
 
-.. contents::
+.. contents:: Table of Contents
    :depth: 3
-..
+   :backlinks: entry
+
 
 VNF/PNF Guidelines
 ==================

@@ -13,11 +13,12 @@
    limitations under the License.
 
 
-VNF Guidelines Documentation
-----------------------------
+VNF Guidelines
+==============
 
 .. toctree::
-    :titlesonly:
+   :maxdepth: 2
+   :numbered:
 
-    vnf_guidelines/index
+   vnf_guidelines
 
