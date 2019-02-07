@@ -12,15 +12,12 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 
-
-.. contents:: Table of Contents
-   :depth: 3
-   :backlinks: entry
-
-
 VNF/PNF Guidelines
 ==================
 
+.. contents:: Table of Contents
+   :depth: 4
+   :backlinks: entry
 
 **Purpose**
 ------------------------
