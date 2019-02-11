@@ -46,8 +46,8 @@ VNF/PNF Guidelines
   to the current release of ONAP.
 - Part of the guidelines also contains visionary recommendations for
   future functionality that could be desirable for ONAP future releases.
-- Conformance requirements are in the `VNF/PNF Requirements
-  document <http://onap.readthedocs.io/en/latest/submodules/vnfrqts/requirements.git/docs/index.html>`_.
+- Conformance requirements are in the :ref:`VNF/PNF Requirements
+  document <vnf_requirements_documentation>`.
 
 **Introduction**
 -------------------------------
