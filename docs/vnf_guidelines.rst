@@ -21,28 +21,28 @@ VNF/PNF Guidelines
 
 **Purpose**
 ------------------------
-- This document focuses on setting and evolving VNF/PNF standards that
+- This document focuses on setting and evolving VNF or PNF standards that
   will facilitate industry discussion, participation, alignment and evolution
-  towards comprehensive and actionable VNF/PNF best practices and standard
+  towards comprehensive and actionable VNF or PNF best practices and standard
   interface.
-- The goal is to accelerate adoption of VNF/PNF best practices which will
-  increase innovation, minimize customization needed to onboard VNFs/PNFs as
+- The goal is to accelerate adoption of VNF or PNF best practices which will
+  increase innovation, minimize customization needed to onboard VNFs or PNFs as
   well as reduce implementation complexity, time and cost for all impacted
   stakeholders.
-- The intent is to drive harmonization of VNFs/PNFs across VNF/PNF providers,
+- The intent is to drive harmonization of VNFs or PNFs across VNF or PNF providers,
   Network Cloud Service providers (NCSPs) and the overall Network Function
   Virtualization (NFV) ecosystem by providing both long term vision as well
   as short tem focus and clarity.
 
 **Scope**
 --------------------
-- The audience for this document are VNF/PNF providers, NCSPs and other
+- The audience for this document are VNF or PNF providers, NCSPs and other
   interested 3rd parties who need to know the design, build and lifecycle
-  management requirements for VNFs/PNFs to be compliant with ONAP.
+  management requirements for VNFs or PNFs to be compliant with ONAP.
 - These guidelines describe VNF environment and provide an overview of
   what the VNF developer needs to know to operate and be compliant with ONAP.
 - These guidelines contains high level expectations and references to
-  specific requirements documentation for VNFs/PNFs which are applicable
+  specific requirements documentation for VNFs or PNFs which are applicable
   to the current release of ONAP.
 - Part of the guidelines also contains visionary recommendations for
   future functionality that could be desirable for ONAP future releases.
@@ -57,11 +57,11 @@ Motivation
 
 The requirements and guidelines defined herein are intended to
 facilitate industry discussion, participation alignment and evolution
-toward comprehensive and actionable VNF/PNF best practices. Integration
+toward comprehensive and actionable VNF or PNF best practices. Integration
 costs are a significant impediment to the development and deployment of
 new services. We envision developing open source industry processes and
-best practices leading eventually to VNF/PNF standards supporting commercial
-acquisition of VNFs/PNFs with minimal integration costs. Traditional PNFs
+best practices leading eventually to VNF or PNF standards supporting commercial
+acquisition of VNFs or PNFs with minimal integration costs. Traditional PNFs
 have all been unique like snowflakes and required expensive custom
 integration, whereas VNF products and services should be designed for
 easier integration just like Lego\ :sup:`TM` blocks. For example, by
@@ -98,19 +98,19 @@ agile processes and the emergence of industry supported open source
 communities imply corresponding changes in processes at many industry
 collaboration bodies. With limited operational experience and much more
 dynamic requirements, open source communities are expected to evolve
-these VNF/PNF guidelines further before final documentation of those aspects
+these VNF or PNF guidelines further before final documentation of those aspects
 necessary for standardization. This document and accompanying refer documents
-provides VNF/PNF providers, NCSPs and other interested 3rd parties a set of
+provides VNF or PNF providers, NCSPs and other interested 3rd parties a set of
 guidelines and requirements for the design, build and overall lifecycle
 management of VNFs.
 
-**VNF/PNF Providers**
+**VNF or PNF Providers**
 
 PNF suppliers and those transitioning from providing physical network functions
 to providing VNFs as well as new market entrants should find
-these VNF/PNF requirements and guidelines a useful introduction to the
-requirements to be able to develop VNFs/PNFs for deployment into a Network
-Cloud. VNF/PNF Providers may also be interested to test their VNFs/PNFs in the
+these VNF or PNF requirements and guidelines a useful introduction to the
+requirements to be able to develop VNFs or PNFs for deployment into a Network
+Cloud. VNF or PNF Providers may also be interested to test their VNFs or PNFs in the
 context of an open source implementation of the environment.
 
 **Network Cloud Service Providers (NCSPs)**
@@ -131,11 +131,11 @@ guidelines to meet the industry's collective needs.
 Other parties such as solution providers, open source community,
 industry standard bodies, students and researchers of network
 technologies, as well as enterprise customers may also be interested in
-the VNF/PNF Guidelines. Solution Providers focused on specific industry
-verticals may find these VNF/PNF guidelines useful in the development of
-specialized VNFs/PNFs that can better address the needs of their industry
-through deployment of these VNFs/PNFs in NCSP infrastructure. Open Source
-developers can use these VNF/PNF guidelines to facilitate the automation of
+the VNF or PNF Guidelines. Solution Providers focused on specific industry
+verticals may find these VNF or PNF guidelines useful in the development of
+specialized VNFs or PNFs that can better address the needs of their industry
+through deployment of these VNFs or PNFs in NCSP infrastructure. Open Source
+developers can use these VNF or PNF guidelines to facilitate the automation of
 VNF ingestion and deployment. The emergence of a market for VNFs enables
 NCSPs to more rapidly deliver increased functionality, for execution on
 white box hardware on customer's premises – such functionality may be of
@@ -148,20 +148,20 @@ This document is part of a hierarchy of documents that describes the
 overall Requirements and Guidelines for ONAP. The diagram below
 identifies where this document fits in the hierarchy.
 
-+-------------------------------------------------------------------------+
-| ONAP Requirements and Guidelines                                        |
-+=======================+=================================================+
-| VNF/PNF Guidelines    | Future ONAP Subject Documents                   |
-+-----------------------+-------------------------+-----------------------+
-| VNF/PNF Requirements  | Future VNF/PNF          | Future Requirements   |
-|                       | Requirements Documents  | Documents             |
-+-----------------------+-------------------------+-----------------------+
++--------------------------------------------------------------------------+
+| ONAP Requirements and Guidelines                                         |
++========================+=================================================+
+| VNF or PNF Guidelines  | Future ONAP Subject Documents                   |
++------------------------+------------------------+------------------------+
+| VNF or PNF Requirements| Future VNF or PNF      | Future Requirements    |
+|                        | Requirements Documents | Documents              |
++------------------------+------------------------+------------------------+
 
 Document summary:
 
-**VNF/PNF Guidelines**
+**VNF or PNF Guidelines**
 
--  Describes VNF/PNF environment and overview of requirements
+-  Describes VNF or PNF environment and overview of requirements
 
 *VNF Requirements*
 
@@ -949,7 +949,7 @@ more detailed requirements documents. The subtending documents provide
 more detailed requirements and are listed in Appendix B - References.
 All documents are expected to evolve.
 
-Some of these VNF/PNF guidelines may be more broadly applicable in the
+Some of these VNF or PNF guidelines may be more broadly applicable in the
 industry, e.g., in other open source communities or standards bodies.
 The art of VNF architecture and development is expected to mature
 rapidly with practical deployment and operations experience from a
@@ -959,7 +959,7 @@ enhancements to support their particular operational processes, but
 these guidelines are expected to remain broadly applicable across a
 number of service providers interested in acquiring VNFs.
 
-We invite feedback on these VNF/PNF Guidelines in the context of the
+We invite feedback on these VNF or PNF Guidelines in the context of the
 ONAP Project. We anticipate an ongoing project within the ONAP community
 to maintain similar guidance for VNF developers to ONAP.Comments on these
 guidelines should be discussed there.
