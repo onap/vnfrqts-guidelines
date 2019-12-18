@@ -28,22 +28,20 @@ meetings:
       repeats: 'weekly'
       time: '13:00 UTC'
 repositories:
-    - 'vnfrqts-guidelines'
+    - 'vnfrqts/guidelines'
 committers:
     - <<: *onap_guidelines_ptl
-    - name: 'wenyao guan'
-      email: 'guanwenyao@chinamobile.com'
-      company: 'China Mobile'
-      id: 'guanwenyao'
-      timezone: 'Asia/Shanghai'
     - name: 'Hagop Bozawglanian'
       email: 'hb755d@att.com'
       company: 'ATT'
       id: 'hb755d'
-      timezone: 'Asia/Los Angeles'
+      timezone: 'America/Los Angeles'
 tsc:
     approval: 'https://lists.onap.org/pipermail/onap-tsc'
     changes:
         - type: 'Addition'
           name: 'Hagop Bozawglanian'
           link: 'https://lists.onap.org/pipermail/onap-tsc/2018-June/004978.html'
+        - type: 'Removal'
+          name: 'wenyao guan'
+          link: 'https://https://lists.onap.org/g/onap-tsc/message/5786'
