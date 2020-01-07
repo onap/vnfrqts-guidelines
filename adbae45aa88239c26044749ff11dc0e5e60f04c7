@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a649302f_450c4911",
+        "filename": "INFO.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2020-01-07T05:54:46Z",
+      "side": 1,
+      "message": "You remove Wenyao here, but in the committer list he is still there.\nPlease remove Wenyao from the committers list also.\nCheers\nBengt",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 3
+      },
+      "revId": "adbae45aa88239c26044749ff11dc0e5e60f04c7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
