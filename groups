@@ -1,4 +1,5 @@
 # UUID                                                                             	Group Name
 #
+728b925940f4a25855728d0ce7746affb8dae1a4                                           	saml/onap-gerrit-vnfrqts-guidelines-committers
 daebbf523be390041a1a9c0e340a6d833aae5043                                           	GitHub Replication
 ldap:cn=onap-gerrit-vnfrqts-guidelines-committers,ou=Groups,dc=freestandards,dc=org	ldap/onap-gerrit-vnfrqts-guidelines-committers
