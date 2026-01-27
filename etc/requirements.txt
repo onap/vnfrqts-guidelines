@@ -25,6 +25,5 @@ sphinxcontrib-blockdiag
 sphinxcontrib-needs>=0.2.3
 sphinxcontrib-nwdiag
 sphinxcontrib-seqdiag
-sphinxcontrib-swaggerdoc
 sphinxcontrib-plantuml
 sphinx_bootstrap_theme>=0.4.11
